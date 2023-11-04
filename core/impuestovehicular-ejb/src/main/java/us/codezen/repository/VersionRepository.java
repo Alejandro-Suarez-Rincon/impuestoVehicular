@@ -1,14 +1,14 @@
-package us.codezen;
+package us.codezen.repository;
 
 import jakarta.ejb.Stateful;
 
 @Stateful
-public class Version {
+public class VersionRepository {
   private int major;
   private int minor;
   private int patch;
 
-  public Version() {
+  public VersionRepository() {
     this.major = 0;
     this.minor = 0;
     this.patch = 0;

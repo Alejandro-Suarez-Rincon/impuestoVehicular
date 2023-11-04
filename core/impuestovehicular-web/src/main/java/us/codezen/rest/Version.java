@@ -1,4 +1,4 @@
-package us.codezen;
+package us.codezen.rest;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -8,15 +8,15 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import us.codezen.repository.VersionRepository;
 
-@Path("/")
-public class HomePage {
+@Path("/rest/version")
+public class Version {
 
-  @Inject()
+  @Inject
   private VersionRepository versionRepository;
 
   @GET
-  @Produces(MediaType.TEXT_HTML)
-  public Response getHTMLContent(){
-    return Response.ok("<h1>Codezen company</h1> Impuesto Vehicular version: <strong>" + versionRepository.getVersion() + "</strong>").build();
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response getVersion() {
+    return Response.ok("{\"version\":\"" + versionRepository.getVersion() +"\"}").build();
   }
 }
