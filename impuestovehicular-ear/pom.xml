@@ -105,6 +105,7 @@
                         </feature-pack>
                     </feature-packs>
                     <layers>
+                        <layer>datasources-web-server</layer>
                         <layer>web-console</layer>
                     </layers>
 
