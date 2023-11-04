@@ -17,6 +17,7 @@ public class Version {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public Response getVersion() {
-    return Response.ok("{\"version\":\"" + versionRepository.getVersion() +"\"}").build();
+    return Response.ok("{\"version\":\"" + versionRepository.getVersion() + "\"}")
+        .build();
   }
 }
