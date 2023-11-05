@@ -85,6 +85,14 @@
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <configuration>
                     <skip>false</skip>
+                    <port>9999</port>
+                    <hostname>0.0.0.0</hostname>
+                    <env>
+                        <MYSQL_USER>codezen</MYSQL_USER>
+                        <MYSQL_PASSWORD>codezen</MYSQL_PASSWORD>
+                        <MYSQL_DATABASE>codezen</MYSQL_DATABASE>
+                        <MYSQL_DATASOURCE>codezen</MYSQL_DATASOURCE>
+                    </env>
                     <add-user>
                         <users>
                             <user>
