@@ -96,20 +96,30 @@
 
                     <feature-packs>
                         <feature-pack>
-                            <location>org.wildfly:wildfly-galleon-pack:${parent.version.wildfly-server}</location>
+                            <location>
+                                    org.wildfly:wildfly-galleon-pack:${version.wildfly-server}</location>
                         </feature-pack>
                         <feature-pack>
                             <groupId>org.wildfly</groupId>
                             <artifactId>wildfly-datasources-galleon-pack</artifactId>
-                            <version>${parent.version.wildfly-datasources-galleon-pack}</version>
+                            <version>${version.wildfly-datasources-galleon-pack}</version>
                         </feature-pack>
                     </feature-packs>
                     <layers>
+                        <layer>cloud-server</layer>
+                        <layer>ejb</layer>
                         <layer>datasources-web-server</layer>
+                        <layer>mysql-datasource</layer>
                         <layer>web-console</layer>
                     </layers>
-
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
