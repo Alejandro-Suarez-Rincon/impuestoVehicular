@@ -10,4 +10,5 @@
 - [AdrianaPiracoca](https://github.com/AdrianaPiracoca)
 - [Kmoyano](https://github.com/Kmoyano)
 - [Leonardo110721](https://github.com/Leonardo110721)
+- [JAlexYRodriguez](https://github.com/JAlexYRodriguez)
 - [JuanPi0205](https://github.com/JuanPi0205)
