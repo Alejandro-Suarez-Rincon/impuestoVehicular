@@ -2,5 +2,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class CreateVehicleResqDTO(
-    Private String mensaje;  
+    private String idOwner;
+    private String idVehicle;
 )
