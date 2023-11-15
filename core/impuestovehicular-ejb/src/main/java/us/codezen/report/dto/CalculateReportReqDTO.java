@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -25,11 +25,11 @@ public class CalculateReportReqDTO {
     private String model;
 
     @NonNull
-    private long cubucCapacity;
+    private Long cubucCapacity;
 
     @NonNull
-    private Date yearAppraisal;
+    private LocalDateTime yearAppraisal;
 
     @NonNull
-    private Date liquidationDate;
+    private LocalDateTime liquidationDate;
 }
