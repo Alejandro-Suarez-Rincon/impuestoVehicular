@@ -14,10 +14,8 @@ public class Appraisal{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_avaluo")
     private long id;
-    @Column(name = "año")
-    private LocalDate año;
-    @Column(name = "valor_avaluo")
-    private double valorAvaluo;
+    @Column(name = "value_appraisal")
+    private double valueAppraisal;
     @Column(name = "capacity_Cilindet")
     private int capacityCilinder;
     @Column(name = "line")
