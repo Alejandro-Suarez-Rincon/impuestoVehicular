@@ -1,13 +1,9 @@
 package us.codezen.owner.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.util.Date;
+import lombok.Data;
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class QueryOwnerReqDTO{
-    private String identification;
+    private int identification;
 }
