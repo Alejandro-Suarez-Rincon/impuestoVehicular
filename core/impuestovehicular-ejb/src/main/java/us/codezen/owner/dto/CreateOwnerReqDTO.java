@@ -1,15 +1,13 @@
 package us.codezen.owner.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
+import lombok.Data;
 import java.time.LocalDateTime;
-import java.util.Date;
+
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class CreateOwnerReqDTO{
+
         private int identification;
         private String firstName;
         private String secondName;
