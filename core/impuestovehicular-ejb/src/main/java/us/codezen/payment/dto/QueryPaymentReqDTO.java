@@ -1,12 +1,10 @@
 package us.codezen.payment.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.io.Serializable;
 
-@Getter
-@Setter
+@Data
 public class QueryPaymentReqDTO implements Serializable {
     private String plate;
 }

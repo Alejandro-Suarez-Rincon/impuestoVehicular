@@ -1,11 +1,10 @@
 package us.codezen.payment.dto;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+
+import lombok.Data;
 
 import java.io.Serializable;
-@Getter
-@Setter
+
+@Data
 
 public class CreatePaymentReqDTO implements Serializable {
 

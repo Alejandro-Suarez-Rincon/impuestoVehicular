@@ -1,13 +1,8 @@
 package us.codezen.payment.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-@AllArgsConstructor
-
+@Data
 public class CalculateLatePaymentResDTO {
 
     public double late_payment;

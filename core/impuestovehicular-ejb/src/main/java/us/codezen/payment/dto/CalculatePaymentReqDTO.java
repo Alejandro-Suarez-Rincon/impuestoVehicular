@@ -1,19 +1,13 @@
 package us.codezen.payment.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
+import lombok.Data;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 
-@Getter
-@Setter
-
-
+@Data
 public class CalculatePaymentReqDTO implements Serializable {
 
     private String plate;
 
-    private Date date_payment;
+    private LocalDateTime date_payment;
 }

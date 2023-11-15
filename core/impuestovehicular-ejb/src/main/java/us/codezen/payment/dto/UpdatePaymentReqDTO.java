@@ -1,13 +1,11 @@
 package us.codezen.payment.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
-@Getter
-@Setter
+import java.time.LocalDateTime;
+
+@Data
 
 public class UpdatePaymentReqDTO implements Serializable {
 
@@ -15,5 +13,5 @@ public class UpdatePaymentReqDTO implements Serializable {
     private int payAge;
     private String entity;
     private Long number_transaction;
-    private Date date_payment;
+    private LocalDateTime date_payment;
 }
