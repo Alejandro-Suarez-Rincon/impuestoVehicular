@@ -7,13 +7,13 @@ import us.codezen.vehicle.entities.Vehicle;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "avalúos")
+@Table(name = "appraisal")
 @Data
 public class Appraisal{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_avaluo")
-    private long id;
+    @Column(name = "id_appraisal")
+    private long id_appraisal;
     @Column(name = "value_appraisal")
     private double valueAppraisal;
     @Column(name = "capacity_Cilindet")
