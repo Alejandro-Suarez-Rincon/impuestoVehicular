@@ -14,7 +14,6 @@ public class CreateVehicleReqDTO(
     private String tonnage;
     private String passengers;
     private boolean imported;
-    private boolean blindado;
     private boolean armored;
     private boolean automaticBox;
     private boolean openLetters;
