@@ -2,28 +2,26 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class CreateVehicleResDTO(
-    Private String mensaje;  
-    Private String placa;
-    Private String tipo_de_sevicio;
-    Private String clase;
-    Private String marca_comercial;
-    Private String linea;
-    Private String tonelaje;
-    Private String pasajeros;
-    Private String carroceria;
-    Private String capacidad_de_cilindraje;
-    Private String valor_de_IVA;
-    Private String modelo;
-    Private boolean importado;
-    Private boolean blindado;
-    Private boolean caja_automatica;
-    Private boolean cartas_abiertas;
-    Private boolean rodado;
-    Private boolean chatarrizado;
-    Private boolean Confiscado;
-    Private boolean Accidentado;
-    Private String estado;
-    Private String dominio_de_extencion;
-    Private String tipo_de_vehiculo;
-    Private String antiguo;
+    private String plate;
+    private String typeService;
+    private String idCharacteristicsVehicle;
+    private String trademark
+    private String line;
+    private String valueIva;
+    private boolean ancient;
+    private String model;
+    private String bodywork;
+    private String cylinderCapacity;
+    private String tonnage;
+    private String passengers;
+    private boolean imported;
+    private boolean blindado;
+    private boolean armored;
+    private boolean automaticBox;
+    private boolean openLetters;
+    private boolean stolen;
+    private boolean confiscated;
+    private boolean scrapped;
+    private String state;
+    private String domainExtension;
 )
