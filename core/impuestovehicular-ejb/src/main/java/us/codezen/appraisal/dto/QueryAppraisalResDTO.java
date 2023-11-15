@@ -2,25 +2,29 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class QueryAppraisalResDTO{
-    Private long id ;
-    Private String tipo;
-    Private String clase;
-    Private String marca;
-    Private String linea;
-    Private String tonelaje;
-    Private String pasajeros;
-    Private String carroceria;
-    Private String cilindraje;
-    Private String valorAntesIva;
-    Private String modelo;
-    Private boolean importado;
-    Private boolean blindado;
-    Private boolean cajaAutomatica;
-    Private boolean cartasAbiertas;
-    Private boolean decomisado;
-    Private boolean chatarrizado;
-    Private String estado;
-    Private String extecionDominio;
-    Private boolean antiguo;
+    private long id ;
+    private String type;
+    private String class;
+    private String trademark;
+    private String line;
+    private String tonnage;
+    private String passengers;
+    private String bodywork;
+    private String displacement;
+    private String vatValue;
+    private String model;
+    private boolean imported;
+    private boolean shielded;
+    private boolean automaticBox;
+    private boolean openLetters;
+    private boolean confiscated;
+    private boolean scrapped;
+    private String state;
+    private String domainextension;
+    private boolean old;
+    private String vehicleType;
+    private String passengers;
+    private String confiscated;
+    private String stolen;    
         
 }
