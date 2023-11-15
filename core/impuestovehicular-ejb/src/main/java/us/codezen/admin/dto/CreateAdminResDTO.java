@@ -8,12 +8,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class CreateAdminResDTO {
-  @Nonnull
-  private long id;
+	@Nonnull
+	private long id;
 
-  @Nonnull
-  private String email;
+	@Nonnull
+	private String email;
 }

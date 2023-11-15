@@ -6,8 +6,7 @@ import jakarta.annotation.Nonnull;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 public class ValidateAdminResDTO implements Serializable {
 	@Nonnull
 	private long id;
