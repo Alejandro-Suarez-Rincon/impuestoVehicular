@@ -1,12 +1,9 @@
 package us.codezen.owner.dto;
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import java.time.LocalDateTime;
-
-
 @Data
 public class QueryOwnerResDTO{
+
     private Long identification;
     private String typeIdentification;
     private String first_name;
