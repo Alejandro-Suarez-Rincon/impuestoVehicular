@@ -1,11 +1,9 @@
 package us.codezen.admin.dto;
 
-import java.io.Serializable;
+import lombok.Data;
+import lombok.NonNull;
 
-import jakarta.annotation.Nonnull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import java.io.Serializable;
 
 @AllArgsConstructor
 @Data

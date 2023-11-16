@@ -1,11 +1,9 @@
 package us.codezen.admin.dto;
 
+import lombok.Data;
+import lombok.NonNull;
+
 import java.io.Serializable;
-
-import jakarta.annotation.Nonnull;
-import lombok.Getter;
-import lombok.Setter;
-
 @Data
 public class QueryAdminReqDTO implements Serializable {
 	@Nonnull
