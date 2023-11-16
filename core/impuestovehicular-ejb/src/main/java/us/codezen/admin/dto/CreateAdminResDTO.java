@@ -1,19 +1,16 @@
 package us.codezen.admin.dto;
 
+import lombok.Data;
+import lombok.NonNull;
+
 import java.io.Serializable;
 
-import jakarta.annotation.Nonnull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class CreateAdminResDTO {
-  @Nonnull
-  private long id;
+	@Nonnull
+	private Long id;
 
-  @Nonnull
-  private String email;
+	@Nonnull
+	private String email;
 }
