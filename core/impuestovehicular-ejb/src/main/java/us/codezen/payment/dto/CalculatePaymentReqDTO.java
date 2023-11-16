@@ -9,5 +9,5 @@ public class CalculatePaymentReqDTO implements Serializable {
 
     private String plate;
 
-    private LocalDateTime date_payment;
+    private LocalDateTime datePayment;
 }
