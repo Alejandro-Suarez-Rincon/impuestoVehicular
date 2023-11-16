@@ -16,24 +16,25 @@ public class Owner {
     @Column(name = "identification_type", nullable = false)
     private boolean identificationType;
 
-    @Column(name = "first_name")
+    @Column(name = "first_name",nullable = false)
     private String firstName;
 
-    @Column(name = "second_name", length = 30)
+    @Column(name = "second_name", length = 30, nullable = false)
     private String secondName;
 
-    @Column(name = "first_last_name", length = 30)
+    @Column(name = "first_last_name", length = 30, nullable = false)
     private String firstLastName;
 
-    @Column(name = "second_last_name", length = 30)
+    @Column(name = "second_last_name", length = 30, nullable = false)
     private String secondLastName;
 
-    @Column(name = "born_date", length = 30)
+    @Column(name = "born_date", length = 30, nullable = false)
     private String bornDate;
 
-    @Column(name = "phone", length = 50)
+    @Column(name = "phone", length = 50, nullable = false)
     private String phone;
 
-    @Column(name = "email", length = 50)
+    @Column(name = "email", length = 50, nullable = false)
     private String email;
+    
 }

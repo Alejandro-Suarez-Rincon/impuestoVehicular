@@ -10,7 +10,6 @@ import java.time.LocalDate;
 @Data
 public class Vehicle {
     @Id
-    @GeneratedValue
     private String plate;
 
     @Column(name = "type_Service", nullable = false)
