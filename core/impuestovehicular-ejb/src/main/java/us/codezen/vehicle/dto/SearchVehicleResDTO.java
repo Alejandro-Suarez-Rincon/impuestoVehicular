@@ -1,6 +1,5 @@
 import lombok.Data;
 @Data
-@AllArgsConstructor
 public class CreateVehicleResDTO(
     private String plate;
     private String typeService;
