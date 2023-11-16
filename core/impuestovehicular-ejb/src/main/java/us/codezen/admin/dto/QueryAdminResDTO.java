@@ -9,7 +9,7 @@ import lombok.Setter;
 @Data
 public class QueryAdminResDTO implements Serializable {
 	@Nonnull
-	private long id;
+	private Long id;
 
 	@Nonnull
 	private String email;

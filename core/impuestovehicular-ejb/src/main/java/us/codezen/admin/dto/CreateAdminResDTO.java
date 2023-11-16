@@ -11,7 +11,7 @@ import lombok.Setter;
 @Data
 public class CreateAdminResDTO {
 	@Nonnull
-	private long id;
+	private Long id;
 
 	@Nonnull
 	private String email;
