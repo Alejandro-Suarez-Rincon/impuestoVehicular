@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class CalculateLatePaymentResDTO {
 
-    public double late_payment;
+    public double latePayment;
 }

@@ -10,5 +10,5 @@ import java.time.LocalDateTime;
 @Data
 public class CalculateLatePaymentReqDTO implements Serializable {
     private String plate;
-    private LocalDateTime date_payment;
+    private LocalDateTime datePayment;
 }

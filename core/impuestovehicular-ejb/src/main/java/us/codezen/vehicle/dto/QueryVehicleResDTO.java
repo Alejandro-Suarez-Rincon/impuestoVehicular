@@ -1,11 +1,12 @@
 package us.codezen.vehicle.dto;
 
 import lombok.Data;
+import us.codezen.vehicle.enums.VehicleTypeServiceEnum;
 
 @Data
 public class QueryVehicleResDTO {
     private String plate;
-    private String typeService;
+    private VehicleTypeServiceEnum typeService;
     private String idCharacteristicsVehicle;
     private String trademark;
     private String line;

@@ -10,8 +10,8 @@ import java.time.LocalDateTime;
 public class QueryPaymentResDTO {
     private String plate;
     private Long identification;
-    private LocalDateTime date_payment;
+    private LocalDateTime datePayment;
     private double discount;
-    private double late_value;
-    private double value; //avaluo
+    private double lateValue;
+    private double value;
 }

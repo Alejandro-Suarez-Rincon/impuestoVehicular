@@ -2,6 +2,7 @@ package us.codezen.owner.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
 
 @Entity
 @Data
@@ -14,7 +15,8 @@ public class Owner {
     private  Long identification;
 
     @Column(name = "identification_type", nullable = false)
-    private boolean identificationType;
+    @Enumerated(EnumType.STRING)
+    private OwnerIdentificationTypeEnum identificationType;
 
     @Column(name = "first_name",nullable = false)
     private String firstName;

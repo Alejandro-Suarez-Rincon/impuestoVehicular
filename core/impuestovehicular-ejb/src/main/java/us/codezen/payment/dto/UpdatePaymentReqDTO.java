@@ -1,6 +1,8 @@
 package us.codezen.payment.dto;
 
 import lombok.Data;
+import us.codezen.payment.enums.PaymentStateType;
+import us.codezen.payment.enums.PaymentTypeAccount;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -11,14 +13,15 @@ public class UpdatePaymentReqDTO implements Serializable {
 
     private String plate;
     private int payAge;
-    private String bank_entity;
-    private Long bank_number_transaction;
-    private LocalDateTime paid_date;
+    private String bankEntity;
+    private Long bankNumberTransaction;
+    private LocalDateTime paidDate;
     private double value;
-    private double late_value;
-    private double discount_value;
-    private LocalDateTime late_date;
-    private boolean state;
-    private LocalDateTime crated_date;
+    private double lateValue;
+    private double discountValue;
+    private LocalDateTime lateDate;
+    private PaymentStateType state;
+    private PaymentTypeAccount bankAccountType;
+    private LocalDateTime cratedDate;
 
 }
