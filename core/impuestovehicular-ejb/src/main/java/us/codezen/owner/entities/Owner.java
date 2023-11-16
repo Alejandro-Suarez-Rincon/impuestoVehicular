@@ -4,24 +4,36 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "owner")
 @Data
 public class Owner {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id_owner;
-    @Column(name = "firstname")
+
+    @Column(name = "identification", nullable = false)
+    private  Long identification;
+
+    @Column(name = "identification_type", nullable = false)
+    private boolean identificationType;
+
+    @Column(name = "first_name")
     private String firstName;
+
     @Column(name = "second_name", length = 30)
     private String secondName;
+
     @Column(name = "first_last_name", length = 30)
     private String firstLastName;
+
     @Column(name = "second_last_name", length = 30)
     private String secondLastName;
-    @Column(name = "birthday", length = 30)
-    private String birthday;
+
+    @Column(name = "born_date", length = 30)
+    private String bornDate;
+
     @Column(name = "phone", length = 50)
     private String phone;
+
     @Column(name = "email", length = 50)
     private String email;
 }
