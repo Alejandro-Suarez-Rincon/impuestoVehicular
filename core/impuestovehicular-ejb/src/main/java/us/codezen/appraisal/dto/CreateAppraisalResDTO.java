@@ -2,7 +2,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class CreateAppraisalResDTO{
-  private long id ;
+  private Long id ;
     private String type;
     private String classVehicle;
     private String bodywork;

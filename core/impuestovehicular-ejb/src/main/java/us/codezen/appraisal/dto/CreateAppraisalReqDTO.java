@@ -1,7 +1,7 @@
 import lombok.Data;
 @Data
 public class CreateAppraisalReqDTO{
-    private long id ;
+    private Long id ;
     private String type;
     private String class;
     private String flag;
