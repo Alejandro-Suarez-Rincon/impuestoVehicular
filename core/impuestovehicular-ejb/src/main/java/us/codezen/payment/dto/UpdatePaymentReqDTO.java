@@ -1,8 +1,8 @@
 package us.codezen.payment.dto;
 
 import lombok.Data;
-import us.codezen.payment.PaymentEnums.PaymentStateType;
-import us.codezen.payment.PaymentEnums.PaymentTypeAccount;
+import us.codezen.payment.enums.PaymentStateType;
+import us.codezen.payment.enums.PaymentTypeAccount;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

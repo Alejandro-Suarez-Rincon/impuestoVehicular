@@ -1,4 +1,4 @@
-package us.codezen.payment.PaymentEnums;
+package us.codezen.payment.enums;
 
 public enum PaymentStateType{
     paid,
