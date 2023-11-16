@@ -5,5 +5,5 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class QueryOwnerReqDTO{
-    private int identification;
+    private Long identification;
 }

@@ -7,13 +7,13 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Data
 public class UpdateOwnerReqDTO{
-    private int identification;
-    private String firstName;
-    private String secondName;
-    private String firstLastName;
-    private String SecondLastName;
-    private LocalDateTime birthday;
-    private int phone;
-    private String email;
+    private Long identification;
     private String typeIdentification;
+    private String first_name;
+    private String last_name;
+    private String second_name;
+    private String second_last_name;
+    private LocalDateTime born_date;
+    private Long phone;
+    private String email;
 }

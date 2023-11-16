@@ -6,5 +6,5 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class SearchOwnerReqDTO{
-    private int identification;
+    private Long identification;
 }
