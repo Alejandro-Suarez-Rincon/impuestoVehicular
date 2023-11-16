@@ -1,11 +1,13 @@
 package us.codezen.owner.dto;
 import lombok.Data;
+import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
+
 import java.time.LocalDateTime;
 @Data
 public class UpdateOwnerReqDTO{
 
     private Long identification;
-    private String typeIdentification;
+    private OwnerIdentificationTypeEnum typeIdentification;
     private String first_name;
     private String last_name;
     private String second_name;
