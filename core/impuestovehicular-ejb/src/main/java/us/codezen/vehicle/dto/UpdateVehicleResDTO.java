@@ -1,7 +1,9 @@
+package us.codezen.vehicle.dto;
+
 import lombok.Data;
 
 @Data
-public class CreateVehicleResqDTO{
+public class UpdateVehicleResDTO {
     private String idOwner;
     private String idVehicle;
 }

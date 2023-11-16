@@ -1,5 +1,8 @@
+package us.codezen.vehicle.dto;
+
 import lombok.Data;
+
 @Data
-public class QueryVehicleReqDTO{
+public class QueryVehicleReqDTO {
     private String plate;
 }

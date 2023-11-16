@@ -1,10 +1,13 @@
+package us.codezen.vehicle.dto;
+
 import lombok.Data;
+
 @Data
-public class CreateVehicleResDTO{
+public class QueryVehicleResDTO {
     private String plate;
     private String typeService;
     private String idCharacteristicsVehicle;
-    private String trademark
+    private String trademark;
     private String line;
     private String valueIva;
     private boolean ancient;
