@@ -1,6 +1,5 @@
 import lombok.Data;
 @Data
-@AllArgsConstructor
 public class CreateAppraisalResDTO{
   private Long id ;
     private String type;

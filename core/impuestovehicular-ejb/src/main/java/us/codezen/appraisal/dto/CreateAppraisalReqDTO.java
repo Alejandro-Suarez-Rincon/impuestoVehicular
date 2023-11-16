@@ -21,9 +21,4 @@ public class CreateAppraisalReqDTO{
     private String state;
     private String domainextecion;
     private boolean old;
-
-
-
-
-
 }
