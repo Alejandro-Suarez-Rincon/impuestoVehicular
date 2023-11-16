@@ -2,9 +2,7 @@ package us.codezen.vehicle.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import us.codezen.owner.entities.Owner;
-
-import java.time.LocalDate;
+import us.codezen.vehicle.enums.VehicleTypeServiceEnum;
 
 @Entity
 @Data
@@ -13,6 +11,7 @@ public class Vehicle {
     private String plate;
 
     @Column(name = "type_service", nullable = false)
-    private boolean typeService;
+    @Enumerated(EnumType.STRING)
+    private VehicleTypeServiceEnum typeService;
 
 }
