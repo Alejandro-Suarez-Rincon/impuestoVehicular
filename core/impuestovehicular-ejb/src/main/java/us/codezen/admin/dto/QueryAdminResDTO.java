@@ -7,10 +7,10 @@ import java.io.Serializable;
 
 @Data
 public class QueryAdminResDTO implements Serializable {
-	@Nonnull
+	@NonNull
 	private Long id;
 
-	@Nonnull
+	@NonNull
 	private String email;
 
 }

@@ -7,9 +7,9 @@ import java.io.Serializable;
 
 @Data
 public class ValidateAdminReqDTO implements Serializable {
-  @Nonnull
+  @NonNull
   private String email;
   
-  @Nonnull
+  @NonNull
   private String password;
 }
