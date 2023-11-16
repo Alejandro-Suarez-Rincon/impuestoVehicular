@@ -1,17 +1,11 @@
 package us.codezen.report.dto;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.List;
 
-@Getter
-@Setter
+@Data
 public class GenerateReportReqDTO {
-    @NonNull
     private List listPaidValidity;
-
-    @NonNull
     private List listPendingValidity;
 }
