@@ -1,12 +1,12 @@
 package us.codezen.admin.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 
-@AllArgsConstructor
+import java.io.Serializable;
+
 @Data
-public class CreateAdminResDTO {
+public class ValidateAdminResDTO implements Serializable {
 	@NonNull
 	private Long id;
 
