@@ -12,7 +12,7 @@ public class Vehicle {
     @Id
     private String plate;
 
-    @Column(name = "type_Service", nullable = false)
+    @Column(name = "type_service", nullable = false)
     private boolean typeService;
 
 }
