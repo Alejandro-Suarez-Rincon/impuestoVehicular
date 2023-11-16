@@ -23,4 +23,6 @@ public class CreateVehicleResDTO(
     private boolean scrapped;
     private String state;
     private String domainExtension;
+    private String type;
+    private String classVehicle;
 )

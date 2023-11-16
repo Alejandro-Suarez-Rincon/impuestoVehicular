@@ -22,4 +22,6 @@ public class CreateVehicleReqDTO(
     private boolean scrapped;
     private String state;
     private String domainExtension;
+    private String type;
+    private String classVehicle;
 )
