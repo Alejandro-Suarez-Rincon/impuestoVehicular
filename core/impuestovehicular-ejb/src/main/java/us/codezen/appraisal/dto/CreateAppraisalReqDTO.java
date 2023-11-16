@@ -1,9 +1,12 @@
+package us.codezen.appraisal.dto;
+
 import lombok.Data;
+
 @Data
-public class CreateAppraisalReqDTO{
-    private Long id ;
+public class CreateAppraisalReqDTO {
+    private Long id;
     private String type;
-    private String class;
+    private String classVehicle;
     private String flag;
     private String line;
     private String tonnage;
