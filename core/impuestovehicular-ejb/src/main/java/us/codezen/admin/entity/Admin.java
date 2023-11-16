@@ -5,7 +5,6 @@ import lombok.Data;
 
 @Entity
 @Data
-//@Table(name = "Admin")
 public class Admin {
   @Id
   @GeneratedValue

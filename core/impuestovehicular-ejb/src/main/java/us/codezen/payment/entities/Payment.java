@@ -15,16 +15,26 @@ public class Payment {
     @GeneratedValue
     private Long id;
 
-    @Column(name = "entity", length = 100, nullable = false)
-    private String entity;
+    @Column(name = "bank_entity", length = 100, nullable = true)
+    private String bankEntity;
+    @Column(name = "bank_account_type", nullable = true)
+    private boolean bankAccountType;
     @Column(name = "pay_age", nullable = false)
     private int payAge;
-    @Column(name = "number_transaction", nullable = false)
-    private Long numberTransaction;
-    @Column(name = "date_payment", nullable = false)
-    private LocalDateTime datePayment;
-    @Column(name = "value", nullable = false)
+    @Column(name = "late_value", nullable = true)
+    private double lateValue;
+    @Column(name = "discount_value", nullable = true)
+    private  double discountValue;
+    @Column(name = "late_date", nullable = true)
+    private LocalDateTime lateDate;
+    @Column(name = "bank_number_transaction", nullable = true)
+    private Long bankNumberTransaction;
+    @Column(name = "created_date", nullable = true)
+    private LocalDateTime createdDate;
+    @Column(name = "value", nullable = true)
     private double value;
-    @Column(name = "state", length = 50, nullable = false)
-    private String state;
+    @Column(name = "state", nullable = true)
+    private boolean state;
+    @Column(name = "paid_date", nullable = true)
+    private LocalDateTime paidDate;
 }
