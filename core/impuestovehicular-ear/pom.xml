@@ -86,8 +86,8 @@
                 <configuration>
                     <skip>false</skip>
                     <env>
-                        <MYSQL_USER>root</MYSQL_USER>
-                        <MYSQL_PASSWORD>lfgh5656</MYSQL_PASSWORD>
+                        <MYSQL_USER>codezen</MYSQL_USER>
+                        <MYSQL_PASSWORD>codezen</MYSQL_PASSWORD>
                         <MYSQL_DATABASE>codezen</MYSQL_DATABASE>
                         <MYSQL_DATASOURCE>codezen</MYSQL_DATASOURCE>
                     </env>
