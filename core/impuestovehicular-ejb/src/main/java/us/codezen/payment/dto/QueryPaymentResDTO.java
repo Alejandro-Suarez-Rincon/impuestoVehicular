@@ -12,7 +12,6 @@ public class QueryPaymentResDTO {
     private Long identification;
     private LocalDateTime date_payment;
     private double discount;
-
-    private double late_payment;
-    private double appraisal;
+    private double late_value;
+    private double value; //avaluo
 }
