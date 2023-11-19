@@ -1,8 +1,10 @@
 package us.codezen.appraisal.dto;
 
 import lombok.Data;
+import lombok.NonNull;
 
 @Data
 public class SearchAppraisalResDTO {
-  private boolean SearchAppraisal;
+    @NonNull
+    private boolean SearchAppraisal;
 }
