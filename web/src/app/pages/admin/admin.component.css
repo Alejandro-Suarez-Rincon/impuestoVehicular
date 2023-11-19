@@ -1,0 +1,81 @@
+
+/* Estilo de todos los inputs */
+input{
+  height: 25px;
+  text-align: center;
+}
+
+/* Estilo de la cabecera */
+.Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo del contenedor padre */
+.CenterContainer{
+  display: flex;
+  height: 65vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo del contenedor hijo (tiene los elementos) */
+.Container{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid;
+  padding: 30px;
+  border-radius: 7px;
+  gap: 15px 0;
+}
+
+/* Estilo de todos los titulos dentro del contenedor hijo */
+.Container h3{
+  text-align: center;
+}
+
+/* Estilo del div que contiene los inputs de correo y contraseña */
+.Info{
+display: flex;
+flex-direction: column;
+gap: 10px 0;
+}
+
+/* Estilo del div que contiene el checkbox y el label */
+.Terms{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Estilo de la cajita del checkbox */
+.Terms input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilo del label dentro de terminos */
+.Terms label{
+  font-size: 12px;
+}
+
+/* Estilo del div que contiene los botones del final */
+.Btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+/* Estilo especifico del boton Registrarme */
+.Reg{
+  border: none;
+  color: #019D76;
+}
+
+/* Estilo especifico del boton Registrarme al pasar el mouse sobre este */
+.Reg:hover{
+  color: white;
+}
