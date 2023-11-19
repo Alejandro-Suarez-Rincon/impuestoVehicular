@@ -7,6 +7,11 @@ button{
   cursor: pointer;
 }
 
+/* Estilo de todos los inputs */
+input{
+  text-align: center;
+}
+
 /* Estilo de todos los botones al pasar el mouse por encima */
 button:hover{
   color: white;
@@ -21,6 +26,11 @@ button:hover{
   margin: 0 50px;
 }
 
+/* Estilo del contenedor de la barra de navegacion y el contenedor principal */
+.Content{
+  margin-top: 20px;
+}
+
 /* Estilo de la barra de navegación */
 .NavBar{
   display: flex;
@@ -28,6 +38,7 @@ button:hover{
   gap: 3px;
 }
 
+/* Estilo de los botones dentro de la barra de navegacion */
 .NavBar button{
   border-radius: 0 10px 0 0;
 }
@@ -42,12 +53,20 @@ button:hover{
   justify-content: center;
   border: 1px solid black;
   gap: 15px 0 ;
+  text-align: center;
   padding: 15px 0;
+}
+
+/* Estilo de todos los titulos dentro del contenedor */
+.Container h3{
+  padding-bottom: 7px;
+  border-bottom: 1px solid;
 }
 
 /* Estilo del formulario de los datos de propietario */
 .OwnerDataContainer{
   display: grid;
+  width: 97%;
   grid-template-columns: 1fr 1fr;
   gap: 7px;
 }
@@ -55,6 +74,7 @@ button:hover{
 /* Estilo del formulario de los datos de vehiculo */
 .VehicleDataContainer{
   display: grid;
+  width: 97%;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 7px;
 }

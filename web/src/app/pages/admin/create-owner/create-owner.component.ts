@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-owner.component.css']
 })
 export class CreateOwnerComponent {
-
+  goToLogin(){
+    window.location.href="/admin"
+  }
 }
