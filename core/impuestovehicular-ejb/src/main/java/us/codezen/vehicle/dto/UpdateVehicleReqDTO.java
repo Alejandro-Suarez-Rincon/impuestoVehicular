@@ -7,7 +7,7 @@ import us.codezen.vehicle.enums.VehicleTypeServiceEnum;
 public class UpdateVehicleReqDTO {
     private String plate;
     private VehicleTypeServiceEnum typeService;
-    private String idCharacteristicsVehicle;
+    private Long idCharacteristicsVehicle;
     private String trademark;
     private String line;
     private String valueIva;
