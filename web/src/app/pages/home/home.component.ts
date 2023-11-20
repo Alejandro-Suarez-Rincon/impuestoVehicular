@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
 
   // Función que redirecciona a la pantalla de servicios de usuario
   goToVehicleTaxes(){
-    this.router.navigate(['/usuario'])
+    this.router.navigate(['/check-taxes'])
   }
 
   // Función que redirecciona a la pantalla de login
