@@ -3,6 +3,8 @@ input{
   text-align: center;
 }
 
+
+
 /* Estilo de la cabecera (logo y botón de Inicio Sesión) */
 .Header{
   display: flex;

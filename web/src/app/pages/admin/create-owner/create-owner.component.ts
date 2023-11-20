@@ -58,4 +58,8 @@ export class CreateOwnerComponent {
   goToLogin(){
     this.router.navigate(['/admin'])
   }
+
+  goToUpdate(){
+    this.router.navigate(['admin/update-owner'])
+  }
 }
