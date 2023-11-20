@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 public class Owner {
@@ -34,9 +36,24 @@ public class Owner {
     private String bornDate;
 
     @Column(name = "phone", length = 50, nullable = false)
-    private String phone;
+    private Long phone;
 
     @Column(name = "email", length = 50, nullable = false)
     private String email;
-    
+
+    public Owner(Long identification, OwnerIdentificationTypeEnum identificationType, String firstname, String secondName, String firstLastName, String secondLastName, LocalDateTime bornDate, Long phone, String email) {
+    this.identification = identification;
+    this.identificationType= identificationType;
+    this.firstName= firstname;
+    this.secondName = secondName;
+    this.firstLastName= firstLastName;
+    this.secondLastName = secondLastName;
+    this.bornDate= String.valueOf(bornDate);
+    this.phone=phone;
+    this.email=email;
+
+    }
+    public Owner(){
+
+    }
 }
