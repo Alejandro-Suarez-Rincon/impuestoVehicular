@@ -4,12 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 
-@AllArgsConstructor
+
+import javax.annotation.Nonnull;
+
+import java.io.Serializable;
+
 @Data
 public class CreateAdminResDTO {
-	@NonNull
-	private Long id;
+    @Nonnull
+    private Long id;
 
-	@NonNull
-	private String email;
+    @Nonnull
+    private String email;
+ 
 }
+
