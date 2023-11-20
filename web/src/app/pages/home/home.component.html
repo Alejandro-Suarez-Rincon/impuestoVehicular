@@ -1,3 +1,32 @@
-<h1>Codezen</h1>
-{{version}}
-<p>home works!</p>
+
+<div class="Header">
+  <!-- &nbsp; ES USADO PARA INDENTAR LA PARTE DE "BOYACÁ" -->
+  <p>IMPUESTOS <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOYACÁ</p>
+  <button (click)="goToLogin()">Inicio Sesión</button>
+</div>
+<hr/>
+
+<div class="Container">
+  <div class="Left">
+    <img src="../../../assets/vehicle.png">
+  </div>
+  <div class="Right">
+    <p>Para la liquidación de Vehículos Automotores de la vigencia de 2023</p>
+    
+    <div class="LinkCard enabled" (click)="goToVehicleTaxes()">
+      <img src="../../../assets/minivehicle.png">
+      <p>Impuestos Vehículos</p>
+    </div>
+
+    <div class="LinkCard disabled">
+      <img src="../../../assets/wip.png">
+      <p>En Desarrollo ...</p>
+    </div>
+
+    <div class="LinkCard disabled">
+      <img src="../../../assets/wip.png">
+      <p>En Desarrollo ...</p>
+    </div>
+    
+  </div>
+</div>

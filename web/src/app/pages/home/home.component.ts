@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CoreAPIService } from 'src/app/services/core-api.service';
 
 // NOTE: Esta clase ha sido creada con estado inicial y luego Angular cambia el
@@ -19,7 +20,7 @@ class VersionDTO {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  constructor(private readonly coreAPIService: CoreAPIService) { }
+  constructor(private readonly coreAPIService: CoreAPIService,private router:Router){}
   public version: string = "";
 
   ngOnInit(): void {
@@ -28,5 +29,16 @@ export class HomeComponent implements OnInit {
       Object.assign(versionDTO, state);
       this.version = versionDTO.version;
     });
+  }
+
+
+  // Función que redirecciona a la pantalla de servicios de usuario
+  goToVehicleTaxes(){
+    this.router.navigate(['/usuario'])
+  }
+
+  // Función que redirecciona a la pantalla de login
+  goToLogin(){
+    this.router.navigate(['/admin'])
   }
 }
