@@ -1,8 +1,10 @@
 package us.codezen.appraisal.dto;
 
 import lombok.Data;
+import lombok.NonNull;
 
 @Data
 public class QueryAppraisalReqDTO {
-   private Long id;
+    @NonNull
+    private Long id;
 }

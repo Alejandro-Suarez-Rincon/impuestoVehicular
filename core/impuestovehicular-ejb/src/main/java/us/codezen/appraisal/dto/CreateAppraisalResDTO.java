@@ -1,31 +1,56 @@
 package us.codezen.appraisal.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
 public class CreateAppraisalResDTO {
-  private Long id;
-  private String type;
-  private String classVehicle;
-  private String ancient;
-  private String armored;
-  private String trademarrk;
-  private String line;
-  private String tonnage;
-  private String bodywork;
-  private String displacement;
-  private String vatValue;
-  private String model;
-  private boolean imported;
-  private boolean shielded;
-  private boolean automaticBox;
-  private boolean openLetters;
-  private boolean scrapped;
-  private String state;
-  private String domainextension;
-  private boolean old;
-  private String vehicleType;
-  private String passengers;
-  private String confiscated;
-  private String stolen;
+    @NotNull
+    private Long id;
+    @NotNull
+    private String type;
+    @NotNull
+    private String classVehicle;
+    @NotNull
+    private String ancient;
+    @NotNull
+    private String armored;
+    @NotNull
+    private String trademarrk;
+    @NotNull
+    private String line;
+    @NotNull
+    private String tonnage;
+    @NotNull
+    private String bodywork;
+    @NotNull
+    private int cylinderCapacity;
+    @NotNull
+    private String vatValue;
+    @NotNull
+    private String model;
+    @NotNull
+    private boolean imported;
+    @NotNull
+    private boolean shielded;
+    @NotNull
+    private boolean automaticBox;
+    @NotNull
+    private boolean openLetters;
+    @NotNull
+    private boolean scrapped;
+    @NotNull
+    private String state;
+    @NotNull
+    private String domainextension;
+    @NotNull
+    private boolean old;
+    @NotNull
+    private String vehicleType;
+    @NotNull
+    private String passengers;
+    @NotNull
+    private String confiscated;
+    @NotNull
+    private String stolen;
 }
