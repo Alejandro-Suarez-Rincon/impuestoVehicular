@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -8,9 +9,12 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
+  constructor(private router:Router){}
 
+  // Estado checkbox terminos y condiciones
   terms: boolean = false;
 
+  // Información Formulario
   form = new FormGroup({
     correo_electronico: new FormControl(''),
     contrasena: new FormControl('')
@@ -23,7 +27,7 @@ export class AdminComponent {
 
   // Función que redirecciona a la pantalla de login
   goToLogin(){
-    window.location.href="/admin"
+    this.router.navigate(['/admin'])
   }
 
   // Función que modifica el estado del checkbox
