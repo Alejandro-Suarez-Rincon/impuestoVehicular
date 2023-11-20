@@ -42,8 +42,7 @@ public class VehicleService {
                 createVehicleReqDTO.getDomainExtension(),
                 createVehicleReqDTO.getOpenLetters());
 
-        vehicleRepository.CreateVehicle(vehicle);
-
+        vehicleRepository.CreateVehicle(vehicle);      //Se crea servicio con el repositorio
         return new CreateVehicleResDTO(vehicle.getIdentification(), vehicle.getIdCharacteristicsVehicle());
 
     }
