@@ -11,19 +11,22 @@ public class QueryOwnerResDTO {
     @NotNull
     private Long identification;
     @NotNull
-    private OwnerIdentificationTypeEnum typeIdentification;
+    private OwnerIdentificationTypeEnum identificationType;
     @NotNull
-    private String first_name;
+    private String firstname;
     @NotNull
-    private String last_name;
+    private String secondName;
     @NotNull
-    private String second_name;
+    private String firstLastName;
     @NotNull
-    private String second_last_name;
+    private String secondLastName;
     @NotNull
-    private LocalDateTime born_date;
+    private LocalDateTime bornDate;
     @NotNull
     private Long phone;
     @NotNull
     private String email;
+
+    public QueryOwnerResDTO(Long identification, OwnerIdentificationTypeEnum identificationType, String firstName, String secondName, String firstLastName, String secondLastName, String bornDate, Long phone, String email) {
+    }
 }
