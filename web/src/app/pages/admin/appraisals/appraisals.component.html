@@ -1,0 +1,58 @@
+<div class="Header">
+    <p>IMPUESTOS <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOYACÁ</p>
+    <button (click)="goToLogin()">Inicio Sesión</button>
+  </div>
+  <hr/>
+  
+  <div class="Content">
+    <nav class="NavBar">
+      <button>Guardar</button>
+      <button>Consultar</button>
+      <button>Actualizar</button>
+      <button>Inactivar</button>
+    </nav>
+    
+    <div class="Container">
+    
+      <h3>Avaluo</h3>
+      <form class="AppraisalsContainer" [formGroup]="appraisalsForm">
+
+        <label for="placa_vehiculo">Placa Vehiculo</label>
+        <input type="text" formControlName="placa_vehiculo" placeholder="placa_vehiculo">
+        <label for="año">Año</label>
+        <input type="date" id="año" formControlName="año"><br>
+
+
+        <input type="text" formControlName="clase" placeholder="Clase">
+        <input type="text" formControlName="modelo" placeholder="Modelo">
+        <input type="text" formControlName="importado" placeholder="Importado">
+        <input type="text" formControlName="decomisado" placeholder="Decomisado"><br>
+
+        <input type="text" formControlName="marca" placeholder="Marca">
+        <input type="text" formControlName="carroceria" placeholder="Carroceria">
+        <input type="text" formControlName="blindado" placeholder="Blindado">
+        <input type="text" formControlName="chatarrizado" placeholder="Chatarrizado"><br>
+
+        <input type="text" formControlName="linea" placeholder="Linea">
+        <input type="text" formControlName="cilindraje" placeholder="Cilindraje">
+        <input type="text" formControlName="caja_automatica" placeholder="Caja Automatica">
+        <input type="text" formControlName="estado" placeholder="Estado"><br>
+
+        <input type="text" formControlName="val_antes_iva" placeholder="Valor antes de Iva">
+        <input type="text" formControlName="tonelaje" placeholder="Tonelaje">
+        <input type="text" formControlName="carta_abiertas" placeholder="Carta Abiertas">
+        <input type="text" formControlName="ext_dominio" placeholder="Ext. de Dominio"><br>
+        
+        <input type="text" formControlName="tipo_servicio" placeholder="Tipo de Servicio">
+        <input type="number" formControlName="pasajeros" placeholder="Pasajeros">
+        <input type="text" formControlName="robado" placeholder="Robado">
+        <input type="text" formControlName="antiguo" placeholder="Antiguo"><br>
+
+        <label for="valor_avaluo">Su avaluo es de: </label>
+        <input type="text" formControlName="valor_avaluo" placeholder="Valor Avaluo">
+      </form>
+    
+      <button (click)="handleSubmit()">Enviar</button>
+    
+    </div>
+  </div>
