@@ -16,8 +16,8 @@ export class AdminComponent {
 
   // Información Formulario
   form = new FormGroup({
-    correo_electronico: new FormControl(''),
-    contrasena: new FormControl('')
+    email: new FormControl(''),
+    password: new FormControl('')
   })
 
   // Función que envia el json al servicio REST
