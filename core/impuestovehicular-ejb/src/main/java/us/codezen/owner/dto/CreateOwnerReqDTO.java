@@ -1,5 +1,6 @@
 package us.codezen.owner.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
 
@@ -7,14 +8,23 @@ import java.time.LocalDateTime;
 
 @Data
 public class CreateOwnerReqDTO {
-        private Long identification;
-        private OwnerIdentificationTypeEnum typeIdentification;
-        private String first_name;
-        private String last_name;
-        private String second_name;
-        private String second_last_name;
-        private LocalDateTime born_date;
-        private Long phone;
-        private String email;
+    @NotNull
+    private Long identification;
+    @NotNull
+    private OwnerIdentificationTypeEnum typeIdentification;
+    @NotNull
+    private String first_name;
+    @NotNull
+    private String last_name;
+    @NotNull
+    private String second_name;
+    @NotNull
+    private String second_last_name;
+    @NotNull
+    private LocalDateTime born_date;
+    @NotNull
+    private Long phone;
+    @NotNull
+    private String email;
 
 }
