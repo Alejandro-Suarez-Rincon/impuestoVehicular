@@ -1,12 +1,14 @@
 package us.codezen.vehicle.dto;
 
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class CreateVehicleResDTO {
     @NotNull
-    private String idOwner;
+    private Long identification;
     @NotNull
-    private String idVehicle;
+    private Long idCharacteristicsVehicle;
 }

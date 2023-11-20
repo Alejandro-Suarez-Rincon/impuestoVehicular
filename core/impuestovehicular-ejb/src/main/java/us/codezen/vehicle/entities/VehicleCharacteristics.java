@@ -2,13 +2,16 @@ package us.codezen.vehicle.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.extern.java.Log;
 
 @Entity
 @Data
 public class VehicleCharacteristics {
     @Id
     @GeneratedValue
-    private Long id;
+    private Long idCharacteristicsVehicle;
+    @Column(name = "identification", nullable = false)
+    private Long identification;
     @Column(name = "trademark", length = 150, nullable = false)
     private String trademark;
     @Column(name = "line", length = 100, nullable = false)
@@ -47,4 +50,60 @@ public class VehicleCharacteristics {
     private String state;
     @Column(name = "domain_extension", length = 50, nullable = true)
     private String domainExtension;
+    @Column(name = "openLetters", length = 100, nullable = false)
+    private String openLetters;
+
+
+    public VehicleCharacteristics(
+            Long idCharacteristicsVehicle,
+            Long identification,
+            String trademark,
+            String line,
+            String type,
+            String classVehicle,
+            double valueIva,
+            String ancient,
+            String model,
+            String bodywork,
+            int cylinderCapacity,
+            Long tonnage,
+            int passengers,
+            boolean imported,
+            boolean armored,
+            boolean automaticBox,
+            boolean stolen,
+            boolean confiscated,
+            boolean scrapped,
+            String state,
+            String domainExtension,
+            String openLetters
+    ) {
+        this.idCharacteristicsVehicle = idCharacteristicsVehicle;
+        this.identification = identification;
+        this.trademark = trademark;
+        this.line = line;
+        this.type = type;
+        this.classVehicle = classVehicle;
+        this.valueIva = valueIva;
+        this.ancient = ancient;
+        this.model = model;
+        this.bodywork = bodywork;
+        this.cylinderCapacity = cylinderCapacity;
+        this.tonnage = tonnage;
+        this.passengers = passengers;
+        this.imported = imported;
+        this.armored = armored;
+        this.automaticBox = automaticBox;
+        this.stolen = stolen;
+        this.confiscated = confiscated;
+        this.scrapped = scrapped;
+        this.state = state;
+        this.domainExtension = domainExtension;
+        this.openLetters = openLetters;
+    }
+
+    public VehicleCharacteristics() {
+    }
+
+
 }
