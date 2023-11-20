@@ -15,9 +15,14 @@ button{
   cursor: pointer;
 }
 
-
 /* Estilo de todos los botones al pasar el mouse por encima */
 button:hover{
   color: white;
   background-color: #019D76;
+}
+
+button:disabled{
+  color: rgb(155, 155, 155);
+  border: 1px solid rgb(155, 155, 155);
+  cursor: not-allowed;
 }

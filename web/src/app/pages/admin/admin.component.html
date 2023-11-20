@@ -9,19 +9,19 @@
 <div class="CenterContainer">
   <div class="Container">
     <h3>Inicio de Sesión</h3>
-    <form class="Info">
-      <input type="text" name="correo_electronico" placeholder="Correo Electronico">
-      <input type="password" name="contrasena" placeholder="Contraseña">
+    <form class="Info" [formGroup]="form">
+      <input type="text" formControlName="correo_electronico" placeholder="Correo Electronico">
+      <input type="password" formControlName="contrasena" placeholder="Contraseña">
     </form>
     
     <div class="Terms">
-      <input type="checkbox" id="terminos" name="terminos">
+      <input type="checkbox" id="terminos" name="terminos" (click)="toggleTerms()">
       <label for="terminos">Acepta nuestros términos y condiciones</label>
     </div>
   
     <div class="Btns">
       <button class="Reg">Registrarme</button>
-      <button>Siguiente</button>
+      <button (click)="handleSubmit()" [disabled]="!terms">Siguiente</button>
     </div>
   </div>
 </div>
