@@ -14,7 +14,7 @@ public class AppraisalService {
     @Inject
     private AppraisalRepository appraisalRepository;
 
-    public CreateAppraisalResDTO createAdmin(CreateAppraisalReqDTO createAppraisalReqDTO) {
+    public CreateAppraisalResDTO createAppraisal(CreateAppraisalReqDTO createAppraisalReqDTO) {
         final Appraisal appraisal = new Appraisal(
                 createAppraisalReqDTO.getId_appraisal(),
                 createAppraisalReqDTO.getValueAppraisal(),
@@ -43,7 +43,7 @@ public class AppraisalService {
             return null;
         }
     }
-    public Appraisal updateVehicle(UpdateAppraisalReqDTO updateAppraisalReqDTO){
+    public Appraisal updateAppraisal(UpdateAppraisalReqDTO updateAppraisalReqDTO){
 
         Appraisal existAppraisal= appraisalRepository.findByIdAppraisal(updateAppraisalReqDTO.getId_appraisal());
         if (existAppraisal!=null){
