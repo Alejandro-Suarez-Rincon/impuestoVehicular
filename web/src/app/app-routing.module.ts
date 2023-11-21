@@ -33,6 +33,21 @@ const routes: Routes = [
         (m) => m.UpdateOwnerModule
       ),
   },
+
+  {
+    path: 'consultownerlogin',
+    loadChildren: () =>
+      import('./pages/admin/consult-ownerOne/consult-owner.module').then(
+        (m) => m.ConsultOwnerModule
+      ),
+  },
+  {
+    path: 'consultowner',
+    loadChildren: () =>
+      import('./pages/admin/consult-OwnerTwo/consult-ownertwo.module').then(
+        (m) => m.ConsultOwnerTwoModule
+      ),
+  },
   {
     path: '**',
     loadChildren: () =>

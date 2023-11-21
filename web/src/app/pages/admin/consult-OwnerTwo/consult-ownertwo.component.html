@@ -1,0 +1,37 @@
+<div class="Header">
+  <!-- &nbsp; ES USADO PARA INDENTAR LA PARTE DE "BOYACÁ" -->
+  <p>IMPUESTOS <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOYACÁ</p>
+  <button (click)="goToLogin()">Inicio Sesión</button>
+</div>
+<hr/>
+
+<div class="Content">
+  <nav class="NavBar">
+    <button >Guardar</button>
+    <button class="enabled">Consultar</button>
+    <button >Actualizar</button>
+    <button >Inactivar</button>
+  </nav>
+
+  <div class="Container">
+    <div class="ContainerContent">
+    <h3>Consultar Propietario</h3>
+    <form class="Container" [formGroup]="ownerForm">
+      <input type="text" formControlName="first_name" class="ContainerContent" placeholder="Primer Nombre">
+      <input type="text" formControlName="second_name" class="ContainerContent" placeholder="Segundo Nombre">
+      <input type="text" formControlName="last_name" class="ContainerContent" placeholder="Primer Apellido">
+      <input type="text" formControlName="second_last_name"  class="ContainerContent" placeholder="Segundo Apellido">
+      <input type="text" formControlName="typeIdentification" class="ContainerContent" placeholder="Tipo de Documento">
+      <input type="text" formControlName="Identification" class="ContainerContent" placeholder="Numero de Documento">
+      <label for="born_date" class="ContainerContent">Fecha de Nacimiento</label>
+      <input type="date" id="born_date" formControlName="born_date" class="ContainerContent">
+      <input type="text" formControlName="email" placeholder="Correo Electronico" class="ContainerContent">
+      <input type="text" formControlName="phone" placeholder="Numero Telefonico" class="ContainerContent">
+    </form>
+  
+    <div class="Btns">
+      <button (click)="handleSubmit()" >Consultar</button>
+    </div>
+  </div>
+  </div>
+</div>
