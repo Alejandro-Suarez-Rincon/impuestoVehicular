@@ -1,11 +1,11 @@
 package us.codezen.owner.dto;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import lombok.NonNull;
 
 @Data
 
 public class UpdateOwnerResDTO {
-    @NotNull
+    @NonNull
     private String message;
 }

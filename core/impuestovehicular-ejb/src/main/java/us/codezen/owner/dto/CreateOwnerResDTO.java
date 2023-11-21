@@ -1,15 +1,15 @@
 package us.codezen.owner.dto;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NonNull;
 import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
 
 @AllArgsConstructor
 @Data
 
 public class CreateOwnerResDTO {
-    @NotNull
+    @NonNull
     private String message;
 
 

@@ -1,29 +1,29 @@
 package us.codezen.owner.dto;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import lombok.NonNull;
 import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
 
 import java.time.LocalDateTime;
 
 @Data
 public class UpdateOwnerReqDTO {
-    @NotNull
+    @NonNull
     private Long identification;
-    @NotNull
+    @NonNull
     private OwnerIdentificationTypeEnum identificationType;
-    @NotNull
+    @NonNull
     private String firstname;
-    @NotNull
+    @NonNull
     private String secondName;
-    @NotNull
+    @NonNull
     private String firstLastName;
-    @NotNull
+    @NonNull
     private String secondLastName;
-    @NotNull
+    @NonNull
     private LocalDateTime bornDate;
-    @NotNull
+    @NonNull
     private Long phone;
-    @NotNull
+    @NonNull
     private String email;
 }
