@@ -43,4 +43,8 @@ public class Payment {
 
     @Column(name = "paid_date", nullable = true)
     private LocalDateTime paidDate;
+
+    @ManyToOne
+    @JoinColumn(name = "plate_vehicle")
+    private Vehicle vehicle;
 }

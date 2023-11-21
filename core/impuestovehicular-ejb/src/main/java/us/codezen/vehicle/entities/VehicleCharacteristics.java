@@ -3,6 +3,9 @@ package us.codezen.vehicle.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NonNull;
+import us.codezen.appraisal.entities.Appraisal;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -91,4 +94,12 @@ public class VehicleCharacteristics {
     @NonNull
     @Column(name = "openLetters", length = 100, nullable = false)
     private String openLetters;
+
+    @ManyToOne
+    @JoinColumn(name = "plate_vehicle")
+    private Vehicle vehicle;
+
+    @OneToMany(mappedBy = "vehicleCharacteristics")
+    private List<Appraisal> appraisals;
+
 }
