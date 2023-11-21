@@ -2,6 +2,9 @@ package us.codezen.vehicle.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import us.codezen.appraisal.entities.Appraisal;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -51,4 +54,7 @@ public class VehicleCharacteristics {
     @ManyToOne
     @JoinColumn(name = "plate_vehicle")
     private Vehicle vehicle;
+
+    @OneToMany(mappedBy = "vehicleCharacteristics")
+    private List<Appraisal> appraisals;
 }

@@ -19,13 +19,13 @@ public class Vehicle {
     private VehicleTypeServiceEnum typeService;
 
     @ManyToOne
-    @JoinColumn(name = "id_owner")
+    @JoinColumn(name = "owner_id")
     private Owner owner;
 
-    @OneToMany(mappedBy = "vehiclecharacteristics")
+    @OneToMany(mappedBy = "vehicle")
     private List<VehicleCharacteristics> vehicleCharacteristics;
 
-    @OneToMany(mappedBy = "payment")
+    @OneToMany(mappedBy = "vehicle")
     private List<Payment> payments;
 
 }
