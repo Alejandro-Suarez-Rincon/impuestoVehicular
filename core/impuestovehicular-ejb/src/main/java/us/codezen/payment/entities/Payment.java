@@ -1,14 +1,10 @@
 package us.codezen.payment.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import us.codezen.payment.enums.PaymentStateType;
 import us.codezen.payment.enums.PaymentTypeAccount;
+import us.codezen.vehicle.entities.Vehicle;
 
 import java.time.LocalDateTime;
 
@@ -47,4 +43,8 @@ public class Payment {
 
     @Column(name = "paid_date", nullable = true)
     private LocalDateTime paidDate;
+
+    @ManyToOne
+    @JoinColumn(name = "plate_vehicle")
+    private Vehicle vehicle;
 }
