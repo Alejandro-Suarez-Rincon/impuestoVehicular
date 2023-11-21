@@ -62,3 +62,9 @@ input{
   grid-template-columns: 1fr 1fr 1fr;
   gap: 7px;
 }
+
+.ErrorMessage {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

@@ -79,3 +79,9 @@ gap: 10px 0;
 .Reg:hover{
   color: white;
 }
+
+.ErrorMessage {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

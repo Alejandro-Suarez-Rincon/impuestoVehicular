@@ -9,10 +9,14 @@
 <div class="CenterContainer">
   <div class="Container">
     <h3>Inicio de Sesión</h3>
-    <form class="Info" [formGroup]="form">
-      <input type="text" formControlName="email" placeholder="Correo Electronico">
-      <input type="password" formControlName="password" placeholder="Contraseña">
-    </form>
+      <form class="Info" [formGroup]="form">
+        <input type="email" formControlName="email" placeholder="Correo Electronico" required>
+        <div *ngIf="emailError" class="ErrorMessage">{{ emailError }}</div>
+    
+        <input type="password" formControlName="password" placeholder="Contraseña" required>
+        <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
+          
+      </form>
     
     <div class="Terms">
       <input type="checkbox" id="terminos" name="terminos" (click)="toggleTerms()">
@@ -21,7 +25,7 @@
   
     <div class="Btns">
       <button class="Reg">Registrarme</button>
-      <button (click)="handleSubmit()" [disabled]="!terms">Siguiente</button>
+      <button (click)="handleSubmit()" [disabled]="!terms" type="submit">Siguiente</button>
     </div>
   </div>
 </div>
