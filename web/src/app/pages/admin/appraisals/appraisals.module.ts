@@ -15,4 +15,4 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ]
 })
-export class appraisalsModule { }
+export class AppraisalsModule { }
