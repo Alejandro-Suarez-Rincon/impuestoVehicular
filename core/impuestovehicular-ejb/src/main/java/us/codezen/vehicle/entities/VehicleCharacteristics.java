@@ -1,12 +1,9 @@
 package us.codezen.vehicle.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.extern.java.Log;
 
 @Entity
-@AllArgsConstructor
 @Data
 public class VehicleCharacteristics {
     @Id
@@ -102,9 +99,6 @@ public class VehicleCharacteristics {
         this.state = state;
         this.domainExtension = domainExtension;
         this.openLetters = openLetters;
-    }
-
-    public VehicleCharacteristics() {
     }
 
 
