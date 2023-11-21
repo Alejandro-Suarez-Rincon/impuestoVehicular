@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-update-vehicle',
   templateUrl: './update-vehicle.component.html',
-  styleUrls: ['./update-vehicle.component.css']
+  styleUrls: ['./update-vehicle.component.css'],
 })
 export class UpdateVehicleComponent {
   constructor(private router: Router) {}
@@ -15,7 +15,7 @@ export class UpdateVehicleComponent {
 
   // Información Formulario
   form = new FormGroup({
-    plate: new FormControl('')
+    plate: new FormControl(''),
   });
 
   // Función que envia el json al servicio REST
@@ -27,5 +27,12 @@ export class UpdateVehicleComponent {
   goToLogin() {
     this.router.navigate(['/admin']);
   }
-}
 
+  toggleTerms() {
+    this.terms = !this.terms;
+  }
+
+  goToUpdate() {
+    this.router.navigate(['/updateowner']);
+  }
+}

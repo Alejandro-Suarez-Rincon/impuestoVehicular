@@ -64,6 +64,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'actualizarvehiculo',
+    loadChildren: () =>
+      import('./pages/admin/update-vehicle/update-vehicle.module').then(
+        (m) => m.UpdateVehicleModule
+      ),
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
