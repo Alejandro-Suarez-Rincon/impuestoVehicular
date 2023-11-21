@@ -35,6 +35,14 @@ const routes: Routes = [
   },
 
   {
+    path: 'payment',
+    loadChildren: () =>
+      import('./pages/admin/payments/payment.module').then(
+        (m) => m.paymentModule
+      ),
+  },
+
+  {
     path: 'consultownerlogin',
     loadChildren: () =>
       import('./pages/admin/consult-ownerOne/consult-owner.module').then(
