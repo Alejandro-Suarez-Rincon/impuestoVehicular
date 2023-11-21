@@ -2,7 +2,6 @@ package us.codezen.appraisal.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import us.codezen.vehicle.entities.Vehicle;
 import us.codezen.vehicle.entities.VehicleCharacteristics;
 
 import java.time.LocalDate;
@@ -20,5 +19,4 @@ public class Appraisal{
     @ManyToOne
     @JoinColumn(name = "id_vehicle_characters")
     private VehicleCharacteristics vehicleCharacteristics;
-
 }

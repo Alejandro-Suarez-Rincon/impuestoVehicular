@@ -27,5 +27,4 @@ public class Vehicle {
 
     @OneToMany(mappedBy = "vehicle")
     private List<Payment> payments;
-
 }

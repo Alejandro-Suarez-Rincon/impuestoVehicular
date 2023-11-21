@@ -1,13 +1,19 @@
 package us.codezen.vehicle.dto;
 
-import jakarta.validation.constraints.NotNull;
+import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class CreateVehicleResDTO {
+public class CreateVehicleResDTO implements Serializable {
     @NonNull
-    private String idOwner;
+    private Long idCharacteristicsVehicle;
+
     @NonNull
-    private String idVehicle;
+    private String plate;
 }

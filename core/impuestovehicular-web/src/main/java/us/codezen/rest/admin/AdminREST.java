@@ -18,8 +18,7 @@ public class AdminREST{
   @POST
   @Produces(MediaType.APPLICATION_JSON)
   public Response createAdmin(CreateAdminReqDTO createAdminReqDTO){
-    // TODO: Retornar JSON con información del cliente.
     final CreateAdminResDTO createAdminResDTO = this.adminService.createAdmin(createAdminReqDTO);
-    return Response.ok("Created with id: " + createAdminResDTO.getId()).build();
+    return Response.ok(createAdminResDTO).build();
   }
 }
