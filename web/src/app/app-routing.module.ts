@@ -35,10 +35,25 @@ const routes: Routes = [
   },
 
   {
+    path: 'payment',
+    loadChildren: () =>
+      import('./pages/admin/payments/payment.module').then(
+        (m) => m.paymentModule
+      ),
+  },
+
+  {
     path: 'consultownerlogin',
     loadChildren: () =>
       import('./pages/admin/consult-ownerOne/consult-owner.module').then(
         (m) => m.ConsultOwnerModule
+      ),
+  },
+  {
+    path: 'avaluos',
+    loadChildren: () =>
+      import('./pages/admin/appraisals/appraisals.module').then(
+        (m) => m.AppraisalsModule
       ),
   },
   {
