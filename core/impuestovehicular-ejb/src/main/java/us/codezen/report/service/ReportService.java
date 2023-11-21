@@ -4,7 +4,9 @@ import com.itextpdf.text.DocumentException;
 import jakarta.persistence.EntityManager;
 import us.codezen.appraisal.dto.QueryAppraisalResDTO;
 import us.codezen.appraisal.entities.Appraisal;
+import us.codezen.report.dto.CalculateReportReqDTO;
 import us.codezen.report.dto.CalculateReportResDTO;
+import us.codezen.report.dto.GenerateReportReqDTO;
 import us.codezen.report.dto.GenerateReportResDTO;
 import us.codezen.vehicle.dto.SearchVehicleResDTO;
 import us.codezen.vehicle.enums.VehicleTypeServiceEnum;
@@ -22,7 +24,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 public class ReportService {
     List<String> listAuto = new ArrayList();
     List<String> listAppraisal = new ArrayList();
-    public CalculateReportResDTO query(CalculateReportResDTO calculateReportResDTO) {
+    public CalculateReportResDTO query(CalculateReportReqDTO calculateReportReqDTO) {
         // SearchVehicleResDTO vehicle = vehicleService(new SearchVehicleResDTO(query(querySearchVehicle.plate)));
         SearchVehicleResDTO vehicle = new SearchVehicleResDTO(
                 "AGS-056",
@@ -53,7 +55,6 @@ public class ReportService {
         Long id = vehicle.getIdCharacteristicsVehicle();
         String type = vehicle.getType();
 
-        // Duda en estos datos
         // QueryAppraisalResDTO appraisal = appraisalService(new QueryAppraisalResDTO(query(query(queryQueryApraisal.id))));
         QueryAppraisalResDTO appraisal = new QueryAppraisalResDTO(
                 1L,
@@ -98,10 +99,10 @@ public class ReportService {
 
         // Traer el valor de appraisal
         //Double value = appraisal.getValue();
-        return calculateReportResDTO;
+        return new CalculateReportResDTO();
     }
 
-    public GenerateReportResDTO query(GenerateReportResDTO generateReportResDTO){
+    public GenerateReportResDTO queryGenerate(GenerateReportReqDTO generateReportReqDTO){
         Document document = new Document();
 
         try {
@@ -124,6 +125,6 @@ public class ReportService {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-        return generateReportResDTO;
+        return new GenerateReportResDTO();
     }
 }
