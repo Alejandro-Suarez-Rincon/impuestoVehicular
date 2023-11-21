@@ -15,4 +15,4 @@ import { UpdateVehicleComponent } from './update-vehicle.component';
     ReactiveFormsModule 
   ]
 })
-export class UpdateOwnerModule { }
+export class UpdateVehicleModule { }
