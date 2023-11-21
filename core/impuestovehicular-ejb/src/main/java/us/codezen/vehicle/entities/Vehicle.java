@@ -12,6 +12,10 @@ import java.util.List;
 @Data
 public class Vehicle {
     @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(name = "plate", nullable = true)
     private String plate;
 
     @Column(name = "type_service", nullable = false)

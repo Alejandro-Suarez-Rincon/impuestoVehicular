@@ -1,11 +1,16 @@
 package us.codezen.vehicle.service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
+import us.codezen.owner.dto.CreateOwnerReqDTO;
 import us.codezen.owner.dto.SearchOwnerResDTO;
+import us.codezen.owner.entities.Owner;
 import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
+import us.codezen.owner.service.OwnerService;
 import us.codezen.vehicle.dto.*;
 import us.codezen.vehicle.entities.Vehicle;
 import us.codezen.vehicle.entities.VehicleCharacteristics;
@@ -20,11 +25,32 @@ public class VehicleService {
     @Inject
     private VehicleCharacteristicsRepository vehicleCharacteristicsRepository;
 
-    public CreateVehicleResDTO create(CreateVehicleReqDTO createVehicleReqDTO){
-        return new CreateVehicleResDTO((long)1, createVehicleReqDTO.getPlate());
+    @Inject
+    private OwnerService ownerService;
+
+    public CreateVehicleResDTO create(CreateVehicleReqDTO createVehicleReqDTO) {
+        Owner owner = ownerService.create(new CreateOwnerReqDTO(createVehicleReqDTO.getIdentification(),
+                createVehicleReqDTO.getIdentificationType(), createVehicleReqDTO.getFirstname(),
+                createVehicleReqDTO.getSecondName(), createVehicleReqDTO.getFirstLastName(),
+                createVehicleReqDTO.getSecondLastName(), createVehicleReqDTO.getBornDate(),
+                createVehicleReqDTO.getPhone(), createVehicleReqDTO.getEmail()));
+        Vehicle vehicle = new Vehicle();
+        vehicle.setOwner(owner);
+        VehicleCharacteristics vehicleCharacteristic = new VehicleCharacteristics(createVehicleReqDTO.getTrademark(),
+                createVehicleReqDTO.getLine(), createVehicleReqDTO.getType(), createVehicleReqDTO.getClassVehicle(),
+                createVehicleReqDTO.getValueIva(), createVehicleReqDTO.getAncient(), createVehicleReqDTO.getModel(),
+                createVehicleReqDTO.getBodywork(), createVehicleReqDTO.getCylinderCapacity(),
+                createVehicleReqDTO.getTonnage(),
+                createVehicleReqDTO.getPassengers(), false, false, false, false, false, false, null, null,
+                createVehicleReqDTO.getOpenLetters());
+        VehicleCharacteristics vehicleCharacteristicsCreated = this.vehicleCharacteristicsRepository.create(vehicleCharacteristic);
+;        List<VehicleCharacteristics> vehicleCharacteristics = new ArrayList<VehicleCharacteristics>();
+        vehicleCharacteristics.add(vehicleCharacteristicsCreated);
+        vehicle.setVehicleCharacteristics(vehicleCharacteristics);
+        Vehicle vehicleCreated = this.vehicleRepository.create(vehicle);
+        return new CreateVehicleResDTO(vehicleCreated.getId(), createVehicleReqDTO.getPlate());
     }
 
-    
     /*
      * public QueryVehicleResDTO consult(QueryVehicleReqDTO queryVehicleReqDTO) {
      * VehicleCharacteristics vehicleCharacteristics =
