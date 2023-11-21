@@ -16,10 +16,9 @@ public class VehicleService {
     @Inject
     private VehicleRepository vehicleRepository;
 
-    public CreateVehicleResDTO createVehicle(CreateVehicleReqDTO createVehicleReqDTO) {
+/*    public CreateVehicleResDTO createVehicle(CreateVehicleReqDTO createVehicleReqDTO) {
         final VehicleCharacteristics vehicle = new VehicleCharacteristics(
-                createVehicleReqDTO.getIdCharacteristicsVehicle(),
-                createVehicleReqDTO.getIdentification(),
+                null,
                 createVehicleReqDTO.getTrademark(),
                 createVehicleReqDTO.getLine(),
                 createVehicleReqDTO.getType(),
@@ -41,12 +40,14 @@ public class VehicleService {
                 createVehicleReqDTO.getDomainExtension(),
                 createVehicleReqDTO.getOpenLetters());
         vehicleRepository.createVehicle(vehicle);      //Se crea servicio con el repositorio
-        return new CreateVehicleResDTO(vehicle.getIdentification(), vehicle.getIdCharacteristicsVehicle());
-    }
+        return new CreateVehicleResDTO(vehicle.getIdCharacteristicsVehicle());
+    }*/
+    /*
     public QueryVehicleResDTO consult(QueryVehicleReqDTO queryVehicleReqDTO) {
         VehicleCharacteristics vehicleCharacteristics = vehicleRepository.getVehicleByIdCharacteristcs(queryVehicleReqDTO.getIdCharacteristicsVehicle());
         if (vehicleCharacteristics != null) {
-            return new QueryVehicleResDTO(vehicleCharacteristics.getIdCharacteristicsVehicle(),
+            return new QueryVehicleResDTO(
+                    vehicleCharacteristics.getIdCharacteristicsVehicle(),
                     vehicleCharacteristics.getIdentification(),
                     vehicleCharacteristics.getTrademark(),
                     vehicleCharacteristics.getLine(),
@@ -75,7 +76,8 @@ public class VehicleService {
     public SearchVehicleResDTO search(Long idCharacteristicsVehicle){
         VehicleCharacteristics vehicleCharacteristics= vehicleRepository.getVehicleByIdCharacteristcs(idCharacteristicsVehicle);
         if (vehicleCharacteristics!=null){
-            return new SearchVehicleResDTO(vehicleCharacteristics.getIdCharacteristicsVehicle(),
+            return new SearchVehicleResDTO(
+                    vehicleCharacteristics.getIdCharacteristicsVehicle(),
                     vehicleCharacteristics.getIdentification(),
                     vehicleCharacteristics.getTrademark(),
                     vehicleCharacteristics.getLine(),
@@ -137,4 +139,5 @@ public class VehicleService {
         vehicleCharacteristics.setOpenLetters(updateVehicleReqDTO.getOpenLetters());
 
     }
+    */
 }
