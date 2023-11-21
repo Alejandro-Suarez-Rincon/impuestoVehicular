@@ -6,5 +6,5 @@ import lombok.NonNull;
 @Data
 public class QueryAppraisalReqDTO {
     @NonNull
-    private Long id;
+    private Long id_appraisal;
 }
