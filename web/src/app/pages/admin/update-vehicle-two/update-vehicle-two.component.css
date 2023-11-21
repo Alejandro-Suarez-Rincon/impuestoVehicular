@@ -1,0 +1,140 @@
+.body_html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.VehicleDataContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.NavBar {
+    display: flex;
+   border-radius: 70px;
+        background: #019D76;
+        color: white;
+        width: 140px;
+        height: 50px;
+        padding: 5px;
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+}
+
+
+.data-form h2 {
+    margin-bottom: 10px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    background-color: #cefff4;    
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+}
+
+.submit-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #019D76;
+    color: white;
+    border: none;
+}
+
+
+
+button {
+    border-radius: 5px;    
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    background-color: #019D76;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: white; /* Cambia el fondo al pasar el mouse */
+    color: #019D76; /* Cambia el color del texto al pasar el mouse */
+    border: 2.5px solid black; /* Añade un borde negro al pasar el mouse */    
+}
+
+.VehicleDataContainer input{
+    text-align: center;
+}
+   
+
+p{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+input[type="number"] {
+    width: 48%; 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    margin-bottom: 10px;
+}
+
+h3{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.login button {
+
+    border-radius: 5px;    
+    margin-top: 5px;
+   
+    padding: 10px;
+    background-color: white; /* Cambia el fondo al pasar el mouse */
+    color: #019D76; /* Cambia el color del texto al pasar el mouse */
+    border: 2.5px solid black; /* Añade un borde negro al pasar el mouse */   
+}
+
+.login button:hover {
+    border-radius: 5px;    
+    margin-top: 5px;
+    
+    padding: 10px;
+    background-color: #019D76;
+    color: white;
+    border: none;
+}
