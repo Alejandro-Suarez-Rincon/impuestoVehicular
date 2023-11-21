@@ -7,7 +7,9 @@ import lombok.NonNull;
 import java.io.Serializable;
 
 @Data
-public class CreateAdminResDTO {
+@AllArgsConstructor
+@NoArgsConstructor
+public class CreateAdminResDTO implements Serializable {
     @NonNull
     private Long id;
 

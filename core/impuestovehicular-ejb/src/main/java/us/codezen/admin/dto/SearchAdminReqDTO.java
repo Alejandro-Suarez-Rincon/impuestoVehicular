@@ -5,6 +5,8 @@ import lombok.NonNull;
 
 import java.io.Serializable;
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class SearchAdminReqDTO implements Serializable {
 	@NonNull
 	private String email;
