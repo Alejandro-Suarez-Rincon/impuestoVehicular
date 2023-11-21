@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./update-vehicle-two.component.css']
 })
 
-export class CreateOwnerComponent {
+export class UpdateVehicleTwoComponent {
   constructor(private router:Router){}
 
   // Información Formulario Vehiculo
