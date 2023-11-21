@@ -11,18 +11,23 @@ import us.codezen.vehicle.enums.VehicleTypeServiceEnum;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
 
 public class ReportService {
+    List<String> listAuto = new ArrayList();
+    List<String> listAppraisal = new ArrayList();
     public CalculateReportResDTO query(CalculateReportResDTO calculateReportResDTO) {
         // SearchVehicleResDTO vehicle = vehicleService(new SearchVehicleResDTO(query(querySearchVehicle.plate)));
         SearchVehicleResDTO vehicle = new SearchVehicleResDTO(
                 "AGS-056",
                 VehicleTypeServiceEnum.personal,
-                "1",
+                1L,
                 "ACURA",
                 "MDX",
                 0,
@@ -45,7 +50,7 @@ public class ReportService {
                 "CAMIONETAS Y CAMPEROS"
         );
 
-        String id = vehicle.getIdCharacteristicsVehicle();
+        Long id = vehicle.getIdCharacteristicsVehicle();
         String type = vehicle.getType();
 
         // Duda en estos datos
@@ -74,11 +79,25 @@ public class ReportService {
                 "NO"
         );
 
+
+
+        listAuto.add("Placa: " + vehicle.getPlate());
+        listAuto.add(String.valueOf("ID Caracteristica: " + vehicle.getIdCharacteristicsVehicle()));
+        listAuto.add("Marca: " + vehicle.getTrademark());
+        listAuto.add("Linea: " + vehicle.getLine());
+        listAuto.add("Modelo: " + vehicle.getModel());
+        listAuto.add("Cilindraje: " + String.valueOf(vehicle.getCylinderCapacity()));
+        listAuto.add("Tonelaje: " + String.valueOf(vehicle.getTonnage()));
+        listAuto.add("Pasageros: " + String.valueOf(vehicle.getPassengers()));
+        listAuto.add("Estado: " + vehicle.getState());
+        listAuto.add("Dominio de Extencion: " + vehicle.getDomainExtension());
+        listAuto.add("Tipo: " + vehicle.getType());
+
+        listAppraisal.add("Avaluo: " + appraisal.getVatValue());
+
+
         // Traer el valor de appraisal
         //Double value = appraisal.getValue();
-
-
-
         return calculateReportResDTO;
     }
 
@@ -87,21 +106,24 @@ public class ReportService {
 
         try {
             PdfWriter.getInstance(document, new FileOutputStream("Reporte"));
+            document.add(new Paragraph("Vehiculo"));
+            document.open();
+            for (String dato : listAuto) {
+                document.add(new Paragraph(dato));
+            }
 
+            document.add(new Paragraph("Avaluo"));
+            for (String dato : listAppraisal) {
+                document.add(new Paragraph(dato));
+            }
 
+            document.close();
 
         } catch (DocumentException e) {
             throw new RuntimeException(e);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-
-        document.open();
-        // Aqui tiene que traer y guardar todo en el pdf
-
-
-        document.close();
-
         return generateReportResDTO;
     }
 }
