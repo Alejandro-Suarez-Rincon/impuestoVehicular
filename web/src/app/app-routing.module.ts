@@ -50,6 +50,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'avaluos',
+    loadChildren: () =>
+      import('./pages/admin/appraisals/appraisals.module').then(
+        (m) => m.AppraisalsModule
+      ),
+  },
+  {
     path: 'consultowner',
     loadChildren: () =>
       import('./pages/admin/consult-OwnerTwo/consult-ownertwo.module').then(

@@ -11,14 +11,9 @@ import { UpdateVehicleTwoComponent } from './update-vehicle-two/update-vehicle-t
 @NgModule({
   declarations: [
     AdminComponent,
-    AppraisalsComponent,
     UpdateVehicleComponent,
-    UpdateVehicleTwoComponent
+    UpdateVehicleTwoComponent,
   ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    ReactiveFormsModule
-  ]
+  imports: [CommonModule, AdminRoutingModule, ReactiveFormsModule],
 })
-export class AdminModule { }
+export class AdminModule {}
