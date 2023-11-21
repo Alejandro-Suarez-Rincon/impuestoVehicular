@@ -3,6 +3,9 @@ package us.codezen.owner.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
+import us.codezen.vehicle.entities.Vehicle;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -38,5 +41,7 @@ public class Owner {
 
     @Column(name = "email", length = 50, nullable = false)
     private String email;
-    
+
+    @OneToMany(mappedBy = "vehicle")
+    private List<Vehicle> vehicles;
 }

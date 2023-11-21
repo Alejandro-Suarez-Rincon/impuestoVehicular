@@ -47,4 +47,8 @@ public class VehicleCharacteristics {
     private String state;
     @Column(name = "domain_extension", length = 50, nullable = true)
     private String domainExtension;
+
+    @ManyToOne
+    @JoinColumn(name = "plate_vehicle")
+    private Vehicle vehicle;
 }
