@@ -21,41 +21,10 @@ public class VehicleService {
     private VehicleCharacteristicsRepository vehicleCharacteristicsRepository;
 
     public CreateVehicleResDTO create(CreateVehicleReqDTO createVehicleReqDTO){
-        return new CreateVehicleResDTO(null, createVehicleReqDTO.getPlate());
+        return new CreateVehicleResDTO((long)1, createVehicleReqDTO.getPlate());
     }
 
-    // public CreateVehicleResDTO createVehicle(CreateVehicleReqDTO createVehicleReqDTO) {
-    //     SearchOwnerResDTO owner = new SearchOwnerResDTO((long) 1, OwnerIdentificationTypeEnum.cc, "Laura", "Estefania",
-    //             "Araque", "Corredor", LocalDateTime.of(2001, 0, 0, 0, 0), "309", "araque@gmail.com");
-
-    //     final VehicleCharacteristics vehicleCharacteristics = new VehicleCharacteristics(
-    //             null,
-    //             createVehicleReqDTO.getTrademark(),
-    //             createVehicleReqDTO.getLine(),
-    //             createVehicleReqDTO.getType(),
-    //             createVehicleReqDTO.getClassVehicle(),
-    //             createVehicleReqDTO.getValueIva(),
-    //             createVehicleReqDTO.getAncient(),
-    //             createVehicleReqDTO.getModel(),
-    //             createVehicleReqDTO.getBodywork(),
-    //             createVehicleReqDTO.getCylinderCapacity(),
-    //             createVehicleReqDTO.getTonnage(),
-    //             createVehicleReqDTO.getPassengers(),
-    //             createVehicleReqDTO.isImported(),
-    //             createVehicleReqDTO.isArmored(),
-    //             createVehicleReqDTO.isAutomaticBox(),
-    //             createVehicleReqDTO.isStolen(),
-    //             createVehicleReqDTO.isConfiscated(),
-    //             createVehicleReqDTO.isScrapped(),
-    //             createVehicleReqDTO.getState(),
-    //             createVehicleReqDTO.getDomainExtension(),
-    //             createVehicleReqDTO.getOpenLetters());
-    //     vehicleCharacteristicsRepository.create(vehicleCharacteristics);
-
-    //     vehicleRepository.create(new Vehicle());
-        
-    //     return new CreateVehicleResDTO(vehicleCharacteristics.getIdCharacteristicsVehicle());
-    // }
+    
     /*
      * public QueryVehicleResDTO consult(QueryVehicleReqDTO queryVehicleReqDTO) {
      * VehicleCharacteristics vehicleCharacteristics =

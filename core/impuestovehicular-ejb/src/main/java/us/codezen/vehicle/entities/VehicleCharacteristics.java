@@ -9,7 +9,6 @@ import lombok.NonNull;
 public class VehicleCharacteristics {
     @Id
     @GeneratedValue
-    @NonNull
     private Long idCharacteristicsVehicle;
 
     @NonNull
@@ -92,8 +91,4 @@ public class VehicleCharacteristics {
     @NonNull
     @Column(name = "openLetters", length = 100, nullable = false)
     private String openLetters;
-
-    @ManyToOne
-    @JoinColumn(name = "plate_vehicle")
-    private Vehicle vehicle;
 }

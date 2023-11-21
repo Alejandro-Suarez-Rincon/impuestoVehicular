@@ -17,15 +17,4 @@ public class Vehicle {
     @Column(name = "type_service", nullable = false)
     @Enumerated(EnumType.STRING)
     private VehicleTypeServiceEnum typeService;
-
-    @ManyToOne
-    @JoinColumn(name = "id_owner")
-    private Owner owner;
-
-    @OneToMany(mappedBy = "vehiclecharacteristics")
-    private List<VehicleCharacteristics> vehicleCharacteristics;
-
-    @OneToMany(mappedBy = "payment")
-    private List<Payment> payments;
-
 }

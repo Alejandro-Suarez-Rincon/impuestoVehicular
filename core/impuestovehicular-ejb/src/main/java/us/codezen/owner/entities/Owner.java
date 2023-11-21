@@ -42,6 +42,4 @@ public class Owner {
     @Column(name = "email", length = 50, nullable = false)
     private String email;
 
-    @OneToMany(mappedBy = "owner")
-    private List<Vehicle> vehicles;
 }

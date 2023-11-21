@@ -15,5 +15,4 @@ public class Appraisal{
 
     @Column(name = "value_appraisal", nullable = false)
     private double valueAppraisal;
-
 }

@@ -18,7 +18,6 @@ public class VehicleREST {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     public Response test(CreateVehicleReqDTO createVehicleReqDTO){
-      System.out.println(createVehicleReqDTO);
       CreateVehicleResDTO vehicle = vehicleService.create(createVehicleReqDTO);
       return Response.ok(vehicle).build();
     }
