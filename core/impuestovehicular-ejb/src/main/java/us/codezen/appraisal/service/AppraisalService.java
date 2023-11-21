@@ -1,15 +1,12 @@
 package us.codezen.appraisal.service;
 
+import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
-import us.codezen.admin.dto.CreateAdminReqDTO;
-import us.codezen.admin.dto.CreateAdminResDTO;
-import us.codezen.admin.entity.Admin;
-import us.codezen.admin.repository.AdminRepository;
 import us.codezen.appraisal.dto.*;
 import us.codezen.appraisal.entities.Appraisal;
 import us.codezen.appraisal.repository.AppraisalRepository;
-import us.codezen.vehicle.dto.UpdateVehicleReqDTO;
 
+@Stateless
 public class AppraisalService {
     @Inject
     private AppraisalRepository appraisalRepository;

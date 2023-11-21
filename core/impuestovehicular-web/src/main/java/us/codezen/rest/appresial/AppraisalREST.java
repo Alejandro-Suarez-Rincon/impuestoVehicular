@@ -1,16 +1,13 @@
-package us.codezen.appraisal.rest;
+package us.codezen.rest.appresial;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import us.codezen.appraisal.dto.*;
 import us.codezen.appraisal.entities.Appraisal;
 import us.codezen.appraisal.service.AppraisalService;
 
 @Path("/appraisals")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
 public class AppraisalREST {
 
   @Inject
@@ -45,7 +42,6 @@ public class AppraisalREST {
       return Response.ok(updatedAppraisal).build();
     } else {
       return Response.status(Response.Status.NOT_FOUND).build();
-
     }
   }
 }
