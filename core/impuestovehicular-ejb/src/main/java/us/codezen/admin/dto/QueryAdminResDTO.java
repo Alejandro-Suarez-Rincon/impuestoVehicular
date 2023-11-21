@@ -6,6 +6,8 @@ import lombok.NonNull;
 import java.io.Serializable;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class QueryAdminResDTO implements Serializable {
 	@NonNull
 	private Long id;

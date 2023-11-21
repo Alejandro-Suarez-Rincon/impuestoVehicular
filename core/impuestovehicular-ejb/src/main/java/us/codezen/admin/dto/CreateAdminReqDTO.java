@@ -10,6 +10,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CreateAdminReqDTO implements Serializable {
     @NonNull
     private String email;
