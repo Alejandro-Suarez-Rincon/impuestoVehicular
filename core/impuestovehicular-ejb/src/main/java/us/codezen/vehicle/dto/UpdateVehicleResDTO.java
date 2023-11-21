@@ -1,13 +1,13 @@
 package us.codezen.vehicle.dto;
 
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NonNull;
 
 @Data
 public class UpdateVehicleResDTO {
-    @NotNull
+    @NonNull
     private Long identification;
-    @NotNull
+
+    @NonNull
     private Long idCharacteristicsVehicle;
 }

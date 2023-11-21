@@ -1,6 +1,5 @@
 package us.codezen.vehicle.dto;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NonNull;
 import us.codezen.vehicle.enums.VehicleTypeServiceEnum;
@@ -9,48 +8,70 @@ import us.codezen.vehicle.enums.VehicleTypeServiceEnum;
 public class SearchVehicleResDTO {
     @NonNull
     private String plate;
+
     @NonNull
     private VehicleTypeServiceEnum typeService;
+
     @NonNull
     private Long idCharacteristicsVehicle;
+
     @NonNull
     private String trademark;
-    @NotNull
+
+    @NonNull
     private String line;
-    @NotNull
+
+    @NonNull
     private String type;
-    @NotNull
+
+    @NonNull
     private String classVehicle;
-    @NotNull
+
+    @NonNull
     private double valueIva;
-    @NotNull
+
+    @NonNull
     private String ancient;
-    @NotNull
+
+    @NonNull
     private String model;
-    @NotNull
+
+    @NonNull
     private String bodywork;
-    @NotNull
+
+    @NonNull
     private int cylinderCapacity;
-    @NotNull
+
+    @NonNull
     private Long tonnage;
-    @NotNull
+
+    @NonNull
     private int passengers;
-    @NotNull
+
+    @NonNull
     private boolean imported;
-    @NotNull
+
+    @NonNull
     private boolean armored;
-    @NotNull
+
+    @NonNull
     private boolean automaticBox;
-    @NotNull
+
+    @NonNull
     private boolean stolen;
-    @NotNull
+
+    @NonNull
     private boolean confiscated;
-    @NotNull
+
+    @NonNull
     private boolean scrapped;
-    @NotNull
+
+    @NonNull
     private String state;
-    @NotNull
+
+    @NonNull
     private String domainExtension;
-    @NotNull
+
+    @NonNull
     private String openLetters;
 }
