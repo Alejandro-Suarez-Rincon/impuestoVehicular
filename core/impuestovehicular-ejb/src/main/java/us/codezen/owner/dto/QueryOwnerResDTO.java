@@ -1,6 +1,5 @@
 package us.codezen.owner.dto;
 
-import com.sun.source.doctree.SerialDataTree;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +8,7 @@ import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -31,6 +31,4 @@ public class QueryOwnerResDTO implements Serializable {
     private String phone;
     @NonNull
     private String email;
-    public QueryOwnerResDTO(Long identification, OwnerIdentificationTypeEnum identificationType, String firstName, String secondName, String firstLastName, String secondLastName, String bornDate, String phone, String email) {
-    }
 }

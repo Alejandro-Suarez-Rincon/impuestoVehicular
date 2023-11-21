@@ -2,62 +2,59 @@ package us.codezen.owner.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
 import us.codezen.vehicle.entities.Vehicle;
 
-import java.util.List;
-
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
+@RequiredArgsConstructor
 public class Owner {
-    @Id
-    @GeneratedValue(strategy =  GenerationType.AUTO)
-    @Column(name = "identification", nullable = false)
-    private  Long identification;
 
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @NonNull
+    private String identification;
+
+    @NonNull
     @Column(name = "identification_type", nullable = false)
     @Enumerated(EnumType.STRING)
     private OwnerIdentificationTypeEnum identificationType;
 
-    @Column(name = "first_name",nullable = false)
+    @NonNull
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
+    @NonNull
     @Column(name = "second_name", length = 30, nullable = false)
     private String secondName;
 
+    @NonNull
     @Column(name = "first_last_name", length = 30, nullable = false)
     private String firstLastName;
 
+    @NonNull
     @Column(name = "second_last_name", length = 30, nullable = false)
     private String secondLastName;
 
+    @NonNull
     @Column(name = "born_date", length = 30, nullable = false)
-    private String bornDate;
+    private LocalDateTime bornDate;
 
+    @NonNull
     @Column(name = "phone", length = 50, nullable = false)
     private String phone;
 
+    @NonNull
     @Column(name = "email", length = 50, nullable = false)
     private String email;
-
-
-    public Owner(Long identification, OwnerIdentificationTypeEnum identificationType, String firstname, String secondName, String firstLastName, String secondLastName, LocalDateTime bornDate, String phone, String email) {
-    this.identification = identification;
-    this.identificationType= identificationType;
-    this.firstName= firstname;
-    this.secondName = secondName;
-    this.firstLastName= firstLastName;
-    this.secondLastName = secondLastName;
-    this.bornDate= String.valueOf(bornDate);
-    this.phone=phone;
-    this.email=email;
-
-    }
-    public Owner(){
-
-    }
 
     @OneToMany(mappedBy = "owner")
     private List<Vehicle> vehicles;

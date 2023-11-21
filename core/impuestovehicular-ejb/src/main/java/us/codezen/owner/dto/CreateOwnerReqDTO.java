@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Data
 public class CreateOwnerReqDTO implements Serializable {
     @NonNull
-    private Long identification;
+    private String identification;
     @NonNull
     private OwnerIdentificationTypeEnum identificationType;
     @NonNull
