@@ -1,18 +1,18 @@
-import { NgModule } from '@angular/core';
+mport { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CreateOwnerRoutingModule } from './create-owner-routing.module';
-import { CreateOwnerComponent } from './create-owner.component';
+import { UpdateVehicleRoutingModule } from './update-vehicle-two-routing.module';
+import { UpdateVehicleTwoComponent } from './update-vehicle-two.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    CreateOwnerComponent
+    UpdateVehicleTwoComponent
   ],
   imports: [
     CommonModule,
-    CreateOwnerRoutingModule,
+    UpdateVehicleRoutingModule,
     ReactiveFormsModule
   ]
 })
-export class CreateOwnerModule { }
+export class UpdateVehicleModule { }
