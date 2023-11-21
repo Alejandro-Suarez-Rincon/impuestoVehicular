@@ -1,29 +1,34 @@
 package us.codezen.owner.dto;
 
-import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class SearchOwnerResDTO {
-    @NotNull
+public class SearchOwnerResDTO implements Serializable{
+    @NonNull
     private Long identification;
-    @NotNull
+    @NonNull
     private OwnerIdentificationTypeEnum typeIdentification;
-    @NotNull
+    @NonNull
     private String first_name;
-    @NotNull
+    @NonNull
     private String last_name;
-    @NotNull
+    @NonNull
     private String second_name;
-    @NotNull
+    @NonNull
     private String second_last_name;
-    @NotNull
+    @NonNull
     private LocalDateTime born_date;
-    @NotNull
-    private Long phone;
-    @NotNull
+    @NonNull
+    private String phone;
+    @NonNull
     private String email;
 }

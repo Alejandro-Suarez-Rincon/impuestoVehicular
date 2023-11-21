@@ -13,4 +13,7 @@ import lombok.NonNull;
 public class CreateVehicleResDTO implements Serializable {
     @NonNull
     private Long idCharacteristicsVehicle;
+
+    @NonNull
+    private String plate;
 }

@@ -8,6 +8,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import us.codezen.vehicle.service.VehicleService;
 import us.codezen.vehicle.dto.CreateVehicleReqDTO;
+import us.codezen.vehicle.dto.CreateVehicleResDTO;
 
 @Path("/rest/vehicle")
 public class VehicleREST {
@@ -15,11 +16,10 @@ public class VehicleREST {
     VehicleService vehicleService;
 
     @POST
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response test(CreateVehicleReqDTO createVehicleReqDTO){
-      System.out.println(createVehicleReqDTO.getPlate());
-      //vehicleService.createVehicle(createVehicleReqDTO);
-      return Response.ok("Created").build();
+      System.out.println(createVehicleReqDTO);
+      CreateVehicleResDTO vehicle = vehicleService.create(createVehicleReqDTO);
+      return Response.ok(vehicle).build();
     }
-
 }

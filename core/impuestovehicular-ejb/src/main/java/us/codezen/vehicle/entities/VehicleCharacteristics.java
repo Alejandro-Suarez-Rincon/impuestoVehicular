@@ -88,7 +88,12 @@ public class VehicleCharacteristics {
     @Column(name = "domain_extension", length = 50, nullable = true)
     private String domainExtension;
 
+
     @NonNull
     @Column(name = "openLetters", length = 100, nullable = false)
     private String openLetters;
+
+    @ManyToOne
+    @JoinColumn(name = "plate_vehicle")
+    private Vehicle vehicle;
 }
