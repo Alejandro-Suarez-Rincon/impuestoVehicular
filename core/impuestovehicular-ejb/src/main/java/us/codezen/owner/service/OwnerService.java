@@ -78,7 +78,7 @@ public class OwnerService {
     public UpdateOwnerResDTO updateOwner(UpdateOwnerReqDTO updateOwnerReqDTO) {
         Long identification = updateOwnerReqDTO.getIdentification();
 
-        Owner existingOwner = ownerRepository.SearchOwner.set(identification);
+        Owner existingOwner = ownerRepository.SearchOwner.get(identification.intValue());
         if (existingOwner == null) {
             return null;
         }
