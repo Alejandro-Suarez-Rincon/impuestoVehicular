@@ -27,7 +27,7 @@ public class UpdateOwnerReqDTO implements Serializable {
     @NonNull
     private LocalDateTime bornDate;
     @NonNull
-    private Long phone;
+    private String phone;
     @NonNull
     private String email;
 }

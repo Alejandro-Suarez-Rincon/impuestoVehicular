@@ -28,9 +28,9 @@ public class QueryOwnerResDTO implements Serializable {
     @NonNull
     private LocalDateTime bornDate;
     @NonNull
-    private Long phone;
+    private String phone;
     @NonNull
     private String email;
-    public QueryOwnerResDTO(Long identification, OwnerIdentificationTypeEnum identificationType, String firstName, String secondName, String firstLastName, String secondLastName, String bornDate, Long phone, String email) {
+    public QueryOwnerResDTO(Long identification, OwnerIdentificationTypeEnum identificationType, String firstName, String secondName, String firstLastName, String secondLastName, String bornDate, String phone, String email) {
     }
 }

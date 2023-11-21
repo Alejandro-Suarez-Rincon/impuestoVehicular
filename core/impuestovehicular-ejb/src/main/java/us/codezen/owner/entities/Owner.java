@@ -39,13 +39,13 @@ public class Owner {
     private String bornDate;
 
     @Column(name = "phone", length = 50, nullable = false)
-    private Long phone;
+    private String phone;
 
     @Column(name = "email", length = 50, nullable = false)
     private String email;
 
 
-    public Owner(Long identification, OwnerIdentificationTypeEnum identificationType, String firstname, String secondName, String firstLastName, String secondLastName, LocalDateTime bornDate, Long phone, String email) {
+    public Owner(Long identification, OwnerIdentificationTypeEnum identificationType, String firstname, String secondName, String firstLastName, String secondLastName, LocalDateTime bornDate, String phone, String email) {
     this.identification = identification;
     this.identificationType= identificationType;
     this.firstName= firstname;

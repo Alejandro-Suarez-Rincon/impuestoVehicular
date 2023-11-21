@@ -17,6 +17,6 @@ public class CreateOwnerResDTO implements Serializable {
     private String message;
 
 
-    public CreateOwnerResDTO(Long identification, OwnerIdentificationTypeEnum identificationType, String firstName, String secondName, String firstLastName, String secondLastName, String bornDate, Long phone, String email) {
+    public CreateOwnerResDTO(Long identification, OwnerIdentificationTypeEnum identificationType, String firstName, String secondName, String firstLastName, String secondLastName, String bornDate, String phone, String email) {
     }
 }
