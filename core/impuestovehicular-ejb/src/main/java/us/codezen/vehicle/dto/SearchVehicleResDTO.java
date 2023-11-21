@@ -11,7 +11,7 @@ public class SearchVehicleResDTO {
     @NonNull
     private VehicleTypeServiceEnum typeService;
     @NonNull
-    private String idCharacteristicsVehicle;
+    private Long idCharacteristicsVehicle;
     @NonNull
     private String trademark;
     @NonNull
