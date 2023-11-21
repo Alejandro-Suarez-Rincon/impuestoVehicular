@@ -1,21 +1,39 @@
 package us.codezen.vehicle.dto;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class CreateVehicleReqDTO implements Serializable {
     @NonNull
-    private String plate;
+    private String identification;
+    @NonNull
+    private OwnerIdentificationTypeEnum identificationType;
+    @NonNull
+    private String firstname;
+    @NonNull
+    private String secondName;
+    @NonNull
+    private String firstLastName;
+    @NonNull
+    private String secondLastName;
+    @NonNull
+    private LocalDateTime bornDate;
+    @NonNull
+    private String phone;
+    @NonNull
+    private String email;
 
     @NonNull
-    private Long identification;
+    private String plate;
 
     @NonNull
     private String trademark;

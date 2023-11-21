@@ -14,13 +14,12 @@ public class OwnerService {
     @Inject
     private OwnerRepository ownerRepository;
 
-    public CreateOwnerResDTO create(CreateOwnerReqDTO createOwnerReqDTO) {
+    public Owner create(CreateOwnerReqDTO createOwnerReqDTO) {
         final Owner owner = new Owner(createOwnerReqDTO.getIdentification(),createOwnerReqDTO.getIdentificationType(), createOwnerReqDTO.getFirstname(),
                 createOwnerReqDTO.getSecondName(), createOwnerReqDTO.getFirstLastName(),
                 createOwnerReqDTO.getSecondLastName(), createOwnerReqDTO.getBornDate(), createOwnerReqDTO.getPhone(),
                 createOwnerReqDTO.getEmail());
-        ownerRepository.createOwner(owner);
-        return new CreateOwnerResDTO(owner.getId());
+        return ownerRepository.createOwner(owner);
     }
 
     /*
