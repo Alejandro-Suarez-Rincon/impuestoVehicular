@@ -13,9 +13,7 @@ import java.time.LocalDateTime;
 @Data
 public class Owner {
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private Long id_owner;
-
+    @GeneratedValue(strategy =  GenerationType.AUTO)
     @Column(name = "identification", nullable = false)
     private  Long identification;
 
