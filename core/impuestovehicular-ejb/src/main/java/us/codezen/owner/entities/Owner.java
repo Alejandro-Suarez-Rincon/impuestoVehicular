@@ -3,6 +3,9 @@ package us.codezen.owner.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 import us.codezen.owner.enums.OwnerIdentificationTypeEnum;
+import us.codezen.vehicle.entities.Vehicle;
+
+import java.util.List;
 
 import java.time.LocalDateTime;
 
@@ -41,6 +44,7 @@ public class Owner {
     @Column(name = "email", length = 50, nullable = false)
     private String email;
 
+
     public Owner(Long identification, OwnerIdentificationTypeEnum identificationType, String firstname, String secondName, String firstLastName, String secondLastName, LocalDateTime bornDate, Long phone, String email) {
     this.identification = identification;
     this.identificationType= identificationType;
@@ -56,4 +60,8 @@ public class Owner {
     public Owner(){
 
     }
+
+    @OneToMany(mappedBy = "owner")
+    private List<Vehicle> vehicles;
+
 }
