@@ -1,55 +1,56 @@
 package us.codezen.vehicle.dto;
 
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 import us.codezen.vehicle.enums.VehicleTypeServiceEnum;
 
+@AllArgsConstructor
 @Data
 public class SearchVehicleResDTO {
-    @NonNull
-    private String plate;
-    @NonNull
-    private VehicleTypeServiceEnum typeService;
-    @NonNull
-    private String idCharacteristicsVehicle;
-    @NonNull
+    @NotNull
+    private Long idCharacteristicsVehicle;
+    @NotNull
+    private Long identification;
+    @NotNull
     private String trademark;
-    @NonNull
+    @NotNull
     private String line;
-    @NonNull
-    private double valueIva;
-    @NonNull
-    private boolean ancient;
-    @NonNull
-    private String model;
-    @NonNull
-    private String bodywork;
-    @NonNull
-    private int cylinderCapacity;
-    @NonNull
-    private long tonnage;
-    @NonNull
-    private int passengers;
-    @NonNull
-    private boolean imported;
-    @NonNull
-    private boolean armored;
-    @NonNull
-    private boolean automaticBox;
-    @NonNull
-    private boolean openLetters;
-    @NonNull
-    private boolean stolen;
-    @NonNull
-    private boolean confiscated;
-    @NonNull
-    private boolean scrapped;
-    @NonNull
-    private String state;
-    @NonNull
-    private String domainExtension;
-    @NonNull
+    @NotNull
     private String type;
-    @NonNull
+    @NotNull
     private String classVehicle;
+    @NotNull
+    private double valueIva;
+    @NotNull
+    private String ancient;
+    @NotNull
+    private String model;
+    @NotNull
+    private String bodywork;
+    @NotNull
+    private int cylinderCapacity;
+    @NotNull
+    private Long tonnage;
+    @NotNull
+    private int passengers;
+    @NotNull
+    private boolean imported;
+    @NotNull
+    private boolean armored;
+    @NotNull
+    private boolean automaticBox;
+    @NotNull
+    private boolean stolen;
+    @NotNull
+    private boolean confiscated;
+    @NotNull
+    private boolean scrapped;
+    @NotNull
+    private String state;
+    @NotNull
+    private String domainExtension;
+    @NotNull
+    private String openLetters;
 }

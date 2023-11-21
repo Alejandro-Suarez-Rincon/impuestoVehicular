@@ -1,10 +1,12 @@
 package us.codezen.vehicle.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.java.Log;
 
 @Entity
+@AllArgsConstructor
 @Data
 public class VehicleCharacteristics {
     @Id

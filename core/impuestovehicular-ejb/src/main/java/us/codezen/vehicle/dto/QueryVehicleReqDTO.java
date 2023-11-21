@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 public class QueryVehicleReqDTO {
     @NotNull
-    private String plate;
+    private Long idCharacteristicsVehicle;
 }

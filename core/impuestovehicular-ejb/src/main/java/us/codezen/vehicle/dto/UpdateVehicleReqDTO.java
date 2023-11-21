@@ -1,25 +1,28 @@
 package us.codezen.vehicle.dto;
 
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import us.codezen.vehicle.enums.VehicleTypeServiceEnum;
-
+@AllArgsConstructor
 @Data
 public class UpdateVehicleReqDTO {
     @NotNull
-    private String plate;
+    private Long idCharacteristicsVehicle;
     @NotNull
-    private VehicleTypeServiceEnum typeService;
-    @NotNull
-    private String idCharacteristicsVehicle;
+    private Long identification;
     @NotNull
     private String trademark;
     @NotNull
     private String line;
     @NotNull
-    private String valueIva;
+    private String type;
     @NotNull
-    private boolean ancient;
+    private String classVehicle;
+    @NotNull
+    private double valueIva;
+    @NotNull
+    private String ancient;
     @NotNull
     private String model;
     @NotNull
@@ -27,17 +30,15 @@ public class UpdateVehicleReqDTO {
     @NotNull
     private int cylinderCapacity;
     @NotNull
-    private String tonnage;
+    private Long tonnage;
     @NotNull
-    private String passengers;
+    private int passengers;
     @NotNull
     private boolean imported;
     @NotNull
     private boolean armored;
     @NotNull
     private boolean automaticBox;
-    @NotNull
-    private boolean openLetters;
     @NotNull
     private boolean stolen;
     @NotNull
@@ -49,7 +50,5 @@ public class UpdateVehicleReqDTO {
     @NotNull
     private String domainExtension;
     @NotNull
-    private String type;
-    @NotNull
-    private String classVehicle;
+    private String openLetters;
 }

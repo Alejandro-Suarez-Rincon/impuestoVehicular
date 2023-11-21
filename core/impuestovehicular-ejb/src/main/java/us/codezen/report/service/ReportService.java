@@ -9,29 +9,28 @@ public class ReportService {
     public CalculateReportResDTO query(CalculateReportResDTO calculateReportResDTO) {
         // SearchVehicleResDTO vehicle = vehicleService(new SearchVehicleResDTO(query(querySearchVehicle.plate)));
         SearchVehicleResDTO vehicle = new SearchVehicleResDTO(
-                "AGS-056",
-                VehicleTypeServiceEnum.personal,
-                "1",
-                "ACURA",
-                "MDX",
-                0,
-                false,
-                "2021",
-                "ACURA",
-                2600,
-                1200,
-                5,
-                false,
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                "ACTIVO",
-                "NO",
-                "CAMIONETAS Y CAMPEROS",
-                "CAMIONETAS Y CAMPEROS"
+                1L,
+                1049661L,       // identificacion
+                "Toyota",           // marca
+                "Corolla",          // línea
+                "Sedán",            // tipo
+                "Sedán",            // claseVehiculo
+                25000.0,            // valorIva
+                "2010",             // antigüedad
+                "Corolla",          // modelo
+                "Sedán",            // carrocería
+                2000,               // capacidadCilindros
+                1500L,              // tonelaje
+                5,                  // pasajeros
+                false,              // importado
+                false,              // blindado
+                true,               // cajaAutomática
+                false,              // robado
+                false,              // confiscado
+                false,              // desmantelado
+                "Usado",            // estado
+                "XYZ",              // extensiónDominio
+                "ABC123"            // placasAbiertas
         );
 
         // Duda en estos datos
