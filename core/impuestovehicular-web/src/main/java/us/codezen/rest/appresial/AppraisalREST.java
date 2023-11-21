@@ -15,7 +15,6 @@ public class AppraisalREST {
 
   @Inject
   private AppraisalService appraisalService;
-  private String variable;
 
   @POST
   public Response createAppraisal(CreateAppraisalReqDTO createAppraisalReqDTO) {
