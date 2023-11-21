@@ -56,29 +56,7 @@ public class ReportService {
         String type = vehicle.getType();
 
         // QueryAppraisalResDTO appraisal = appraisalService(new QueryAppraisalResDTO(query(query(queryQueryApraisal.id))));
-        QueryAppraisalResDTO appraisal = new QueryAppraisalResDTO(
-                1L,
-                "CAMIONETAS Y CAMPEROS",
-                "CAMIONETAS Y CAMPEROS",
-                "ACURA",
-                "MDX",
-                "2600",
-                "ACURA",
-                "2600",
-                "",
-                "2021",
-                false,
-                false,
-                true,
-                false,
-                false,
-                "ACTIVO",
-                "NO",
-                false,
-                "CAMIONETAS Y CAMPEROS",
-                "5",
-                "NO"
-        );
+        QueryAppraisalResDTO appraisal = new QueryAppraisalResDTO();
 
 
 
@@ -94,7 +72,7 @@ public class ReportService {
         listAuto.add("Dominio de Extencion: " + vehicle.getDomainExtension());
         listAuto.add("Tipo: " + vehicle.getType());
 
-        listAppraisal.add("Avaluo: " + appraisal.getVatValue());
+        //listAppraisal.add("Avaluo: " + appraisal.getVatValue());
 
 
         // Traer el valor de appraisal

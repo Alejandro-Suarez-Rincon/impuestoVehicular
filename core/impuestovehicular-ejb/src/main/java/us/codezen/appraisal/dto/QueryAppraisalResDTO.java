@@ -14,6 +14,7 @@ import java.io.Serializable;
 public class QueryAppraisalResDTO implements Serializable {
     @NonNull
     private Long id_appraisal;
+    
     @NonNull
     private double valueAppraisal;
     @NonNull
