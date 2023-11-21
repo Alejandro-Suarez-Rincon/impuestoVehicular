@@ -1,9 +1,9 @@
-mport { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { UpdateVehicleRoutingModule } from './update-vehicle-two-routing.module';
-import { UpdateVehicleTwoComponent } from './update-vehicle-two.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UpdateVehicleTwoRoutingModule } from './update-vehicle-two-routing.module';
+import { UpdateVehicleTwoComponent } from './update-vehicle-two.component';
+
 
 @NgModule({
   declarations: [
@@ -11,8 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    UpdateVehicleRoutingModule,
+    UpdateVehicleTwoRoutingModule,
     ReactiveFormsModule
   ]
 })
-export class UpdateVehicleModule { }
+export class UpdateVehicleTwoModule { }
