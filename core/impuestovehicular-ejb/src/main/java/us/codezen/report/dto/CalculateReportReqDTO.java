@@ -1,12 +1,18 @@
 package us.codezen.report.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class CalculateReportReqDTO {
+public class CalculateReportReqDTO implements Serializable {
+
     @NonNull
     private String type;
     @NonNull
