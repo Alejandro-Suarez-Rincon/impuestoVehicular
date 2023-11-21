@@ -1,0 +1,27 @@
+
+<div class="Header">
+  <!-- &nbsp; ES USADO PARA INDENTAR LA PARTE DE "BOYACÁ" -->
+  <p>IMPUESTOS <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOYACÁ</p>
+  <button (click)="goToLogin()">Inicio Sesión</button>
+</div>
+<hr/>
+
+<div class="CenterContainer">
+  <div class="Container">
+    <h3>Inicio de Sesión</h3>
+    <form class="Info" [formGroup]="form">
+      <input type="text" formControlName="email" placeholder="Correo Electronico">
+      <input type="password" formControlName="password" placeholder="Contraseña">
+    </form>
+    
+    <div class="Terms">
+      <input type="checkbox" id="terminos" name="terminos" (click)="toggleTerms()">
+      <label for="terminos">Acepta nuestros términos y condiciones</label>
+    </div>
+  
+    <div class="Btns">
+      <button class="Reg">Registrarme</button>
+      <button (click)="handleSubmit()" [disabled]="!terms">Siguiente</button>
+    </div>
+  </div>
+</div>

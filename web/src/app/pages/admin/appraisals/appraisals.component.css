@@ -1,0 +1,52 @@
+
+/* Estilos base para inputs y botones */
+input,
+button {
+  padding: 8px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Utiliza Flexbox para el header */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Estilos para el contenedor principal */
+.Container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  text-align: right;
+}
+
+.text {
+  margin-top: 10px;
+}
+
+/* Estilos para el título del formulario */
+.Container h3 {
+  margin-bottom: 15px;
+}
+
+/* Estilo del formulario con CSS Grid */
+form {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+/* Estilos responsivos para el formulario */
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+    /* Una columna para pantallas pequeñas */
+  }
+}

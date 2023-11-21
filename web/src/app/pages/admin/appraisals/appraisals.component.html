@@ -1,0 +1,47 @@
+<div class="Header">
+    <p>IMPUESTOS <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOYACÁ</p>
+    <button (click)="goToLogin()">Inicio Sesión</button>
+  </div>    
+    <div class="Container">
+    
+      <h3>Avaluo</h3>
+      <form class="AppraisalsContainer" [formGroup]="appraisalsForm">
+
+        <label for="vehicle_plate" class="text">Placa Vehiculo:</label>
+        <input type="text" formControlName="vehicle_plate" placeholder="Placa vehiculo">
+        <label for="date_year" class="text">Año:</label>
+        <input type="date" id="date_year" formControlName="date_year">
+
+
+        <input type="text" formControlName="class" placeholder="Clase">
+        <input type="text" formControlName="model" placeholder="Modelo">
+        <input type="text" formControlName="imported" placeholder="Importado">
+        <input type="text" formControlName="confiscated" placeholder="Decomisado">
+
+        <input type="text" formControlName="trademark" placeholder="Marca">
+        <input type="text" formControlName="bodywork" placeholder="Carroceria">
+        <input type="text" formControlName="armored" placeholder="Blindado">
+        <input type="text" formControlName="scrapped" placeholder="Chatarrizado">
+
+        <input type="text" formControlName="line" placeholder="Linea">
+        <input type="text" formControlName=" cylinderCapacity" placeholder="Cilindraje">
+        <input type="text" formControlName="automaticBox" placeholder="Caja Automatica">
+        <input type="text" formControlName="state" placeholder="Estado">
+
+        <input type="text" formControlName="valueIVA" placeholder="Valor antes de Iva">
+        <input type="text" formControlName="tonnage" placeholder="Tonelaje">
+        <input type="text" formControlName="openLetters" placeholder="Carta Abiertas">
+        <input type="text" formControlName="domainExtension" placeholder="Ext. de Dominio">
+        
+        <input type="text" formControlName="serviceType" placeholder="Tipo de Servicio">
+        <input type="number" formControlName="passengers" placeholder="Pasajeros">
+        <input type="text" formControlName="stolen" placeholder="Robado">
+        <input type="text" formControlName="ancient" placeholder="Antiguo">
+
+        <label for="appraised_value" class="text">Su avaluo es de: </label>
+        <input type="text" formControlName="appraised_value" placeholder="Valor Avaluo">
+      </form>
+    
+      <button (click)="handleSubmit()">Enviar</button>
+    
+    </div>

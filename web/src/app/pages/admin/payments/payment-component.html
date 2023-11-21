@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="payment-component.css">
+</head>
+
+<body>
+
+  <header>
+    <h2>Administración de Pagos</h2>
+  </header>
+
+  <main class="container">
+    <section class="search-section">
+      <div class="form-field">
+        <label for="vehiclePlate">Placa vehículo:</label>
+        <input type="text" id="vehiclePlate" name="vehiclePlate" value="">
+      </div>
+
+      <div class="form-field">
+        <label for="year">Año:</label>
+        <input type="text" id="year" name="year">
+        <button>Filtrar</button>
+      </div>
+
+      <div class="form-field">
+        <label>Pagados/No Pagados</label>
+        <button>Buscar</button>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="info-box"></div>
+      <div class="info-box"></div>
+      <div class="info-box"></div>
+      <div class="info-box"></div>
+      <div class="info-box"></div>
+    </section>
+
+    <section class="payment-section">
+      <div class="form-field">
+        <label for="bankAccount">Cuenta Bancaria:</label>
+        <select id="bankAccount" name="bankAccount">
+          <option value="bancolombia">Bancolombia</option>
+          <!-- Más opciones aquí -->
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="accountType">Tipo de Cuenta:</label>
+        <select id="accountType" name="accountType">
+          <option value="savings">Ahorros</option>
+          <!-- Más opciones aquí -->
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="paymentDate">Fecha de Pago:</label>
+        <input type="text" id="paymentDate" name="paymentDate" value="">
+      </div>
+
+      <div class="form-field">
+        <label for="transactionNumber">Numero de Transacción:</label>
+        <input type="text" id="transactionNumber" name="transactionNumber" value="">
+      </div>
+
+      <button>Validar</button>
+    </section>
+  </main>
+
+</body>
+
+</html>

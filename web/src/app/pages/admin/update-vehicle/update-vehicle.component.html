@@ -1,0 +1,34 @@
+<div class="Header">
+    <!-- &nbsp; ES USADO PARA INDENTAR LA PARTE DE "BOYACÁ" -->
+    <p>IMPUESTOS <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOYACÁ</p>
+    <button (click)="goToLogin()">Inicio Sesión</button> 
+  </div>
+  <hr/>
+  
+  <div class="Content">
+    <nav class="NavBar">
+      <button >Guardar</button>
+      <button >Consultar</button>
+      <button class="enabled">Actualizar</button>
+      <button >Inactivar</button>
+    </nav>
+    
+    <div class="Container">
+      <div class="ContainerContent">
+      <h3>Actualizar Vehiculo</h3>
+      <form class="Info" [formGroup]="form">
+        <input type="text" formControlName="plate" placeholder="Placa">
+      </form>
+      
+      <div class="Terms">
+        <input type="checkbox" id="terminos" name="terminos" (click)="toggleTerms()">
+        <label for="terminos">No soy un robot</label>
+      </div>
+    
+      <div class="Btns">
+        
+        <button (click)="goToUpdate()" [disabled]="!terms">Siguiente</button>
+      </div>
+    </div>
+    </div>
+  </div>

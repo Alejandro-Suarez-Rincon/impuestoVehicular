@@ -1,0 +1,91 @@
+/* Estilo de todos los inputs */
+input{
+  text-align: center;
+}
+
+
+
+/* Estilo de la cabecera (logo y botón de Inicio Sesión) */
+.Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo del contenedor de la barra de navegacion y el contenedor principal */
+.Content{
+  margin-top: 20px;
+}
+
+/* Estilo de la barra de navegación */
+.NavBar{
+  display: flex;
+  gap: 3px;
+}
+
+/* Estilo de los botones dentro de la barra de navegacion */
+.NavBar button{
+  border-radius: 0 10px 0 0;
+}
+
+/* Estilo del contenedor de los formulario */
+.Container{
+  border: 1px solid;
+  border-radius: 7px;
+  display: flex ;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+ 
+}
+.ContainerContent{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
+
+
+}
+
+/* Estilo de todos los titulos dentro del contenedor hijo */
+.Container h3{
+  text-align: center;
+}
+
+/* Estilo del div que contiene los inputs de correo y contraseña */
+.Info{
+display: flex;
+flex-direction: column;
+gap: 10px 0;
+}
+
+/* Estilo del div que contiene el checkbox y el label */
+.Terms{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Estilo de la cajita del checkbox */
+.Terms input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilo del label dentro de terminos */
+.Terms label{
+  font-size: 12px;
+}
+
+/* Estilo del div que contiene los botones del final */
+.Btns{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+

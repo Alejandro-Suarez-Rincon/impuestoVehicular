@@ -1,0 +1,64 @@
+/* Estilo de todos los inputs */
+input{
+  text-align: center;
+}
+
+
+
+/* Estilo de la cabecera (logo y botón de Inicio Sesión) */
+.Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo del contenedor de la barra de navegacion y el contenedor principal */
+.Content{
+  margin-top: 20px;
+}
+
+/* Estilo de la barra de navegación */
+.NavBar{
+  display: flex;
+  gap: 3px;
+}
+
+/* Estilo de los botones dentro de la barra de navegacion */
+.NavBar button{
+  border-radius: 0 10px 0 0;
+}
+
+/* Estilo del contenedor de los formulario */
+.Container{
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  gap: 15px 0 ;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Estilo de todos los titulos dentro del contenedor */
+.Container h3{
+  padding-bottom: 7px;
+  border-bottom: 1px solid;
+}
+
+/* Estilo del formulario de los datos de propietario */
+.OwnerDataContainer{
+  display: grid;
+  width: 97%;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+/* Estilo del formulario de los datos de vehiculo */
+.VehicleDataContainer{
+  display: grid;
+  width: 97%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 7px;
+}
