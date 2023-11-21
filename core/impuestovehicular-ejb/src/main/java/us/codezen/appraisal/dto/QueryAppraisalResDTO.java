@@ -1,50 +1,21 @@
 package us.codezen.appraisal.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import us.codezen.vehicle.entities.VehicleCharacteristics;
 
+import java.io.Serializable;
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class QueryAppraisalResDTO {
+public class QueryAppraisalResDTO implements Serializable {
     @NonNull
-    private Long id;
+    private Long id_appraisal;
     @NonNull
-    private String type;
+    private double valueAppraisal;
     @NonNull
-    private String classVehicle;
-    @NonNull
-    private String trademark;
-    @NonNull
-    private String line;
-    @NonNull
-    private String tonnage;
-    @NonNull
-    private String bodywork;
-    @NonNull
-    private String displacement;
-    @NonNull
-    private String vatValue;
-    @NonNull
-    private String model;
-    @NonNull
-    private boolean imported;
-    @NonNull
-    private boolean shielded;
-    @NonNull
-    private boolean automaticBox;
-    @NonNull
-    private boolean openLetters;
-    @NonNull
-    private boolean scrapped;
-    @NonNull
-    private String state;
-    @NonNull
-    private String domainextension;
-    @NonNull
-    private boolean old;
-    @NonNull
-    private String vehicleType;
-    @NonNull
-    private String passengers;
-    @NonNull
-    private String stolen;
+    private VehicleCharacteristics vehicleCharacteristics;
 }

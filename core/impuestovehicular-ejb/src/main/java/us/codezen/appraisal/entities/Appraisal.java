@@ -1,12 +1,14 @@
 package us.codezen.appraisal.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import us.codezen.vehicle.entities.VehicleCharacteristics;
 
 import java.time.LocalDate;
 
 @Entity
+@AllArgsConstructor
 @Data
 public class Appraisal{
     @Id
