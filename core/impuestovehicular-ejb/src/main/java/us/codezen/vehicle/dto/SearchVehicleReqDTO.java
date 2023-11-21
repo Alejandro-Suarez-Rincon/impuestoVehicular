@@ -2,9 +2,10 @@ package us.codezen.vehicle.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import lombok.NonNull;
 
 @Data
 public class SearchVehicleReqDTO {
-    @NotNull
+    @NonNull
     private String plate;
 }

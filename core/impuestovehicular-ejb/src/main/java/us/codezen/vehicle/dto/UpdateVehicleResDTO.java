@@ -2,11 +2,12 @@ package us.codezen.vehicle.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import lombok.NonNull;
 
 @Data
 public class UpdateVehicleResDTO {
-    @NotNull
+    @NonNull
     private String idOwner;
-    @NotNull
+    @NonNull
     private String idVehicle;
 }
