@@ -1,9 +1,11 @@
 package us.codezen.admin.service;
 
 import jakarta.ejb.Stateless;
+
 import jakarta.inject.Inject;
 import us.codezen.admin.dto.*;
 import us.codezen.admin.entity.Admin;
+import us.codezen.admin.repository.AdminRepository;
 
 @Stateless
 public class AdminService {
