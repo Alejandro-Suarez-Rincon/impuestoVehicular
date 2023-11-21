@@ -10,7 +10,7 @@ public class UpdateVehicleReqDTO {
     @NotNull
     private Long idCharacteristicsVehicle;
     @NotNull
-    private Long identification;
+    private VehicleTypeServiceEnum typeService;
     @NotNull
     private String trademark;
     @NotNull

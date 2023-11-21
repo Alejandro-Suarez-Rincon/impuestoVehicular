@@ -1,19 +1,19 @@
 package us.codezen.vehicle.dto;
 
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 import us.codezen.vehicle.enums.VehicleTypeServiceEnum;
 
-@AllArgsConstructor
 @Data
 public class SearchVehicleResDTO {
-    @NotNull
+    @NonNull
+    private String plate;
+    @NonNull
+    private VehicleTypeServiceEnum typeService;
+    @NonNull
     private Long idCharacteristicsVehicle;
-    @NotNull
-    private Long identification;
-    @NotNull
+    @NonNull
     private String trademark;
     @NotNull
     private String line;
