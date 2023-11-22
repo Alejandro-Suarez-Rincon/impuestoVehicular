@@ -118,6 +118,8 @@
         type="number"
         formControlName="passengers"
         placeholder="Pasajeros"
+        min="1"
+        max="5"
       />
       <input type="text" formControlName="stolen" placeholder="Robado" />
       <input type="text" formControlName="ancient" placeholder="Antiguo" />
@@ -132,7 +134,7 @@
     </div>
     <button
       (click)="handleSubmit()"
-      [disabled]="!ownerForm.valid && !vehicleForm.valid"
+      [disabled]="!ownerForm.valid || !vehicleForm.valid"
       type="submit"
     >
       Enviar

@@ -42,7 +42,7 @@ export class CreateOwnerComponent {
     openLetters: new FormControl('', [Validators.required]),
     domainExtension: new FormControl('', [Validators.required]),
     serviceType: new FormControl('', [Validators.required]),
-    passengers: new FormControl('', [Validators.min(1)]),
+    passengers: new FormControl(1, [Validators.min(1), Validators.max(5)]),
     stolen: new FormControl('', [Validators.required]),
     ancient: new FormControl('', [Validators.required]),
     vehicleType: new FormControl('', [Validators.required]),
