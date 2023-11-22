@@ -1,86 +1,141 @@
 <div class="Header">
   <!-- &nbsp; ES USADO PARA INDENTAR LA PARTE DE "BOYACÁ" -->
-  <p>IMPUESTOS <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOYACÁ</p>
+  <p>IMPUESTOS <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOYACÁ</p>
   <button (click)="goToLogin()">Inicio Sesión</button>
 </div>
-<hr/>
+<hr />
 
 <div class="Content">
   <nav class="NavBar">
     <button class="enabled">Guardar</button>
-    <button >Consultar</button>
-    <button (click)="goToUpdate()" >Actualizar</button>
-    <button >Inactivar</button>
+    <button>Consultar</button>
+    <button (click)="goToUpdate()">Actualizar</button>
+    <button>Inactivar</button>
   </nav>
-  
+
   <div class="Container">
     <h3>Datos de Propietario</h3>
     <form class="OwnerDataContainer" [formGroup]="ownerForm">
-      <input type="text" formControlName="first_name" placeholder="Primer Nombre" required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="second_name" placeholder="Segundo Nombre">
-      <input type="text" formControlName="last_name" placeholder="Primer Apellido"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="second_last_name" placeholder="Segundo Apellido">
-      <input type="text" formControlName="typeIdentification" placeholder="Tipo de Documento" required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="Identification" placeholder="Numero de Documento" required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="email" placeholder="Correo Electronico" required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="phone" placeholder="Numero Telefonico" required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
+      <input
+        type="text"
+        formControlName="first_name"
+        placeholder="Primer Nombre"
+      />
+      <input
+        type="text"
+        formControlName="second_name"
+        placeholder="Segundo Nombre"
+      />
+      <input
+        type="text"
+        formControlName="last_name"
+        placeholder="Primer Apellido"
+      />
+      <input
+        type="text"
+        formControlName="second_last_name"
+        placeholder="Segundo Apellido"
+      />
+      <input
+        type="text"
+        formControlName="typeIdentification"
+        placeholder="Tipo de Documento"
+      />
+      <input
+        type="text"
+        formControlName="Identification"
+        placeholder="Numero de Documento"
+      />
+      <input
+        type="text"
+        formControlName="email"
+        placeholder="Correo Electronico"
+      />
+      <input
+        type="text"
+        formControlName="phone"
+        placeholder="Numero Telefonico"
+      />
       <label for="born_date">Fecha de Nacimiento</label>
-      <input type="date" id="born_date" formControlName="born_date" required>
+      <input type="date" id="born_date" formControlName="born_date" />
     </form>
-  
+    <div class="Error" *ngIf="ownerForm.invalid">
+      Hay campos Vácios en Datos de Propietario
+    </div>
+
     <h3>Datos de Vehículo</h3>
     <form class="VehicleDataContainer" [formGroup]="vehicleForm">
-      <input type="text" formControlName="class" placeholder="Clase" required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="model" placeholder="Modelo"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="imported" placeholder="Importado"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="confiscated" placeholder="Decomisado"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="trademark" placeholder="Marca"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="bodywork" placeholder="Carroceria"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="armored" placeholder="Blindado"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="scrapped" placeholder="Chatarrizado"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="line" placeholder="Linea"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName=" cylinderCapacity" placeholder="Cilindraje"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="automaticBox" placeholder="Caja Automatica"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="state" placeholder="Estado"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="valueIVA" placeholder="Valor antes de Iva"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="tonnage" placeholder="Tonelaje"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="openLetters" placeholder="Carta Abiertas"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="domainExtension" placeholder="Ext. de Dominio"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="serviceType" placeholder="Tipo de Servicio"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="number" formControlName="passengers" placeholder="Pasajeros"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="stolen" placeholder="Robado"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="ancient" placeholder="Antiguo"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-      <input type="text" formControlName="vehicleType" placeholder="Tipo de Vehiculo"required>
-      <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
+      <input type="text" formControlName="class" placeholder="Clase" />
+      <input type="text" formControlName="model" placeholder="Modelo" />
+      <input type="text" formControlName="imported" placeholder="Importado" />
+      <input
+        type="text"
+        formControlName="confiscated"
+        placeholder="Decomisado"
+      />
+      <input type="text" formControlName="trademark" placeholder="Marca" />
+      <input type="text" formControlName="bodywork" placeholder="Carroceria" />
+      <input type="text" formControlName="armored" placeholder="Blindado" />
+      <input
+        type="text"
+        formControlName="scrapped"
+        placeholder="Chatarrizado"
+      />
+      <input type="text" formControlName="line" placeholder="Linea" />
+      <input
+        type="text"
+        formControlName="cylinderCapacity"
+        placeholder="Cilindraje"
+      />
+      <input
+        type="text"
+        formControlName="automaticBox"
+        placeholder="Caja Automatica"
+      />
+      <input type="text" formControlName="state" placeholder="Estado" />
+      <input
+        type="text"
+        formControlName="valueIVA"
+        placeholder="Valor antes de Iva"
+      />
+      <input type="text" formControlName="tonnage" placeholder="Tonelaje" />
+      <input
+        type="text"
+        formControlName="openLetters"
+        placeholder="Carta Abiertas"
+      />
+      <input
+        type="text"
+        formControlName="domainExtension"
+        placeholder="Ext. de Dominio"
+      />
+      <input
+        type="text"
+        formControlName="serviceType"
+        placeholder="Tipo de Servicio"
+      />
+      <input
+        type="number"
+        formControlName="passengers"
+        placeholder="Pasajeros"
+      />
+      <input type="text" formControlName="stolen" placeholder="Robado" />
+      <input type="text" formControlName="ancient" placeholder="Antiguo" />
+      <input
+        type="text"
+        formControlName="vehicleType"
+        placeholder="Tipo de Vehiculo"
+      />
     </form>
-  
-    <button (click)="handleSubmit()" type="submit">Enviar</button>
-  
+    <div class="Error" *ngIf="vehicleForm.invalid">
+      Hay campos Vácios o Incorrectos en Datos de Vehículo
+    </div>
+    <button
+      (click)="handleSubmit()"
+      [disabled]="!ownerForm.valid && !vehicleForm.valid"
+      type="submit"
+    >
+      Enviar
+    </button>
   </div>
 </div>

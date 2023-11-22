@@ -10,14 +10,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class CreateOwnerComponent {
   constructor(private router: Router) {}
 
-  passwordError: string = '';
-
   // Información Formulario Propietario
   ownerForm = new FormGroup({
     first_name: new FormControl('', [Validators.required]),
-    second_name: new FormControl(''),
+    second_name: new FormControl('', [Validators.required]),
     last_name: new FormControl('', [Validators.required]),
-    second_last_name: new FormControl(''),
+    second_last_name: new FormControl('', [Validators.required]),
     typeIdentification: new FormControl('', [Validators.required]),
     Identification: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required]),
@@ -44,7 +42,7 @@ export class CreateOwnerComponent {
     openLetters: new FormControl('', [Validators.required]),
     domainExtension: new FormControl('', [Validators.required]),
     serviceType: new FormControl('', [Validators.required]),
-    passengers: new FormControl(0, [Validators.required]),
+    passengers: new FormControl('', [Validators.min(1)]),
     stolen: new FormControl('', [Validators.required]),
     ancient: new FormControl('', [Validators.required]),
     vehicleType: new FormControl('', [Validators.required]),
@@ -52,11 +50,6 @@ export class CreateOwnerComponent {
 
   // Función que envia el json al servicio REST
   handleSubmit() {
-    this.validateInput();
-
-    if (this.passwordError) {
-      return; // Si hay errores, detener la ejecución
-    }
     console.log(this.ownerForm.value);
     console.log(this.vehicleForm.value);
   }
@@ -64,20 +57,6 @@ export class CreateOwnerComponent {
   // Función que redirecciona a la pantalla de login
   goToLogin() {
     this.router.navigate(['/admin']);
-  }
-
-  validateInput() {
-    const passwordControl = this.ownerForm.get(
-      'first_name' &&
-        'last_name' &&
-        'typeIdentification' &&
-        'Identification' &&
-        'email' &&
-        'phone'
-    );
-    if (passwordControl!.errors?.['required']) {
-      this.passwordError = 'El campo es obligatorio.';
-    }
   }
 
   goToUpdate() {

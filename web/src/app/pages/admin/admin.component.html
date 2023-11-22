@@ -1,31 +1,76 @@
-
 <div class="Header">
   <!-- &nbsp; ES USADO PARA INDENTAR LA PARTE DE "BOYACÁ" -->
-  <p>IMPUESTOS <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOYACÁ</p>
+  <p>IMPUESTOS <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOYACÁ</p>
   <button (click)="goToLogin()">Inicio Sesión</button>
 </div>
-<hr/>
+<hr />
 
 <div class="CenterContainer">
   <div class="Container">
     <h3>Inicio de Sesión</h3>
-      <form class="Info" [formGroup]="form">
-        <input type="email" formControlName="email" placeholder="Correo Electronico" required>
-        <div *ngIf="emailError" class="ErrorMessage">{{ emailError }}</div>
-    
-        <input type="password" formControlName="password" placeholder="Contraseña" required>
-        <div *ngIf="passwordError" class="ErrorMessage">{{ passwordError }}</div>
-          
-      </form>
-    
+    <form class="Info" [formGroup]="form">
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Correo Electronico"
+      />
+      <div
+        class="Errors"
+        *ngIf="
+          form.controls.email.invalid &&
+          form.controls.email.touched &&
+          form.controls.email.errors
+        "
+      >
+        <div *ngIf="form.controls.email.errors['required']">
+          Correo requerido
+        </div>
+
+        <div *ngIf="form.controls.email.errors['email']">Correo Invalido</div>
+      </div>
+
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Contraseña"
+      />
+      <div
+        class="Errors"
+        *ngIf="
+          form.controls.password.invalid &&
+          form.controls.password.touched &&
+          form.controls.password.errors
+        "
+      >
+        <div *ngIf="form.controls.password.errors['required']">
+          Contraseña requerida
+        </div>
+
+        <div *ngIf="form.controls.password.errors['minlength']">
+          La contraseña debe tener al menos 5 caracteres
+        </div>
+      </div>
+    </form>
+
     <div class="Terms">
-      <input type="checkbox" id="terminos" name="terminos" (click)="toggleTerms()">
+      <input
+        type="checkbox"
+        id="terminos"
+        name="terminos"
+        (click)="toggleTerms()"
+      />
       <label for="terminos">Acepta nuestros términos y condiciones</label>
     </div>
-  
+
     <div class="Btns">
       <button class="Reg">Registrarme</button>
-      <button (click)="handleSubmit()" [disabled]="!terms" type="submit">Siguiente</button>
+      <button
+        type="submit"
+        (click)="handleSubmit()"
+        [disabled]="!form.valid || !terms"
+      >
+        Siguiente
+      </button>
     </div>
   </div>
 </div>
